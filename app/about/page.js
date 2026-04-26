@@ -11,20 +11,57 @@ import { heroImages, aboutImages } from '@/data/images';
 import { HiOutlineBuildingOffice2, HiOutlineUserGroup, HiOutlineTrophy, HiOutlineGlobeAmericas } from 'react-icons/hi2';
 
 export const metadata = {
-  title: 'About Us — Expert Construction Cost Estimators',
-  description: 'Learn about OZ Estimation — a team of experienced construction cost estimators with 10+ years of experience delivering accurate, reliable estimations for 5,000+ projects across all 50 US states.',
-  keywords: ['about OZ Estimation', 'construction estimating company', 'estimating team', 'construction cost experts', 'who we are'],
-  alternates: { canonical: 'https://ozestimations.com/about' },
+  title: 'About Us — ASPE-Certified Construction Estimators',
+  description: 'Meet OZ Estimation — ASPE-certified construction cost estimators with 10+ years experience. 5,000+ projects. 98% accuracy across all 50 US states.',
+  keywords: [
+    'about OZ Estimation', 'construction estimating company', 'estimating team', 'construction cost experts',
+    'ASPE certified estimators', 'construction estimation firm', 'professional estimators',
+    'construction cost consultants', 'estimation company USA', 'experienced estimators',
+    'construction bidding experts', 'quantity surveyors USA', 'certified cost estimators',
+  ],
+  alternates: { canonical: 'https://ozestimations.com/about/' },
   openGraph: {
-    title: 'About Us | OZ Estimation',
-    description: '10+ years experience. 5,000+ projects estimated. 98% accuracy. Meet the team behind OZ Estimation.',
-    url: 'https://ozestimations.com/about',
+    title: 'About OZ Estimation | ASPE-Certified Estimators',
+    description: '10+ years experience. 5,000+ projects. 98% accuracy. ASPE-certified team serving all 50 US states.',
+    url: 'https://ozestimations.com/about/',
+    siteName: 'OZ Estimation',
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About OZ Estimation' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ozestimation',
+    title: 'About OZ Estimation — Expert Estimators',
+    description: 'ASPE-certified. 10+ years. 5,000+ projects. 98% accuracy.',
+    images: ['/og-image.png'],
   },
 };
+
+const aboutJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About OZ Estimation',
+    description: 'Learn about OZ Estimation — ASPE-certified construction cost estimators with 10+ years of experience.',
+    url: 'https://ozestimations.com/about',
+    mainEntity: { '@id': 'https://ozestimations.com/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
+      { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://ozestimations.com/about' },
+    ],
+  },
+];
 
 export default function AboutPage() {
   return (
     <>
+      {aboutJsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       {/* Hero */}
       <section className="relative min-h-[55vh] md:min-h-[60vh] py-14 md:py-20 flex items-end overflow-hidden">
         <div className="absolute inset-0">

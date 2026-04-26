@@ -1,16 +1,19 @@
 {
-  "name": "OZ Estimation",
-  "short_name": "Oz Est",
-  "description": "Professional Construction Cost Estimation Services",
+  "name": "OZ Estimation — Construction Cost Estimators",
+  "short_name": "OZ Estimation",
+  "description": "Professional Construction Cost Estimation Services — Accurate Takeoffs & Cost Breakdowns in 24-48 Hours",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A1628",
   "theme_color": "#D4A843",
+  "categories": ["business", "construction", "productivity"],
+  "lang": "en-US",
   "icons": [
     {
       "src": "/icon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }

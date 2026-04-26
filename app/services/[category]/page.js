@@ -21,21 +21,39 @@ export async function generateMetadata({ params }) {
   const { category } = await params;
   const cat = getCategoryBySlug(category);
   if (!cat) return {};
+  const serviceNames = cat.services.map(s => s.title.toLowerCase()).join(', ');
   return {
-    title: `${cat.title} Services — Professional ${cat.title}`,
-    description: `${cat.description} Get accurate ${cat.title.toLowerCase()} with detailed takeoffs, material lists, and cost breakdowns. Delivered in 24-48 hours by certified estimators.`,
+    title: `${cat.title} — Professional Estimation Services`,
+    description: `${cat.description.slice(0, 100)} Services include: ${serviceNames.slice(0, 50)}. ASPE-certified. 24-48 hour delivery.`,
     keywords: [
       cat.title.toLowerCase(),
       `${cat.title.toLowerCase()} services`,
       `${cat.title.toLowerCase()} cost`,
+      `${cat.title.toLowerCase()} company`,
+      `${cat.title.toLowerCase()} near me`,
+      `professional ${cat.title.toLowerCase()}`,
+      `${cat.title.toLowerCase()} contractor`,
       'construction estimation',
       'takeoff services',
+      'quantity takeoff',
+      'material takeoff',
+      ...cat.services.map(s => s.title.toLowerCase()),
     ],
-    alternates: { canonical: `https://ozestimations.com/services/${category}` },
+    alternates: { canonical: `https://ozestimations.com/services/${category}/` },
     openGraph: {
+      title: `${cat.title} Services | OZ Estimation`,
+      description: `${cat.services.length} specialized ${cat.title.toLowerCase()} services. ASPE-certified. 24-48 hours.`,
+      url: `https://ozestimations.com/services/${category}/`,
+      siteName: 'OZ Estimation',
+      type: 'website',
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${cat.title} Services` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@ozestimation',
       title: `${cat.title} | OZ Estimation`,
-      description: cat.description,
-      url: `https://ozestimations.com/services/${category}`,
+      description: `Professional ${cat.title.toLowerCase()}. ${cat.services.length} services. Free quotes.`,
+      images: ['/og-image.png'],
     },
   };
 }
@@ -52,6 +70,9 @@ export default async function CategoryPage({ params }) {
     '@type': 'Service',
     name: cat.title,
     description: cat.description,
+    url: `https://ozestimations.com/services/${category}`,
+    serviceType: cat.title,
+    image: 'https://ozestimations.com/og-image.png',
     provider: {
       '@type': 'Organization',
       name: 'OZ Estimation',

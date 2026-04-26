@@ -8,20 +8,39 @@ import { generalFaqs } from '@/data/faqs';
 import { heroImages } from '@/data/images';
 
 export const metadata = {
-  title: 'Frequently Asked Questions — Construction Estimation FAQ',
-  description: 'Find answers to common questions about our construction cost estimation services, processes, pricing, turnaround times, accuracy guarantees, and how we help contractors win more bids.',
-  keywords: ['construction estimation FAQ', 'estimation questions', 'cost estimation help', 'how estimation works', 'estimation pricing'],
-  alternates: { canonical: 'https://ozestimations.com/faqs' },
+  title: 'FAQ — Pricing, Process & Turnaround Times',
+  description: 'Answers to common questions about construction cost estimation: 24-48 hour turnaround, 98% accuracy, ZIP code-based pricing, and CSI division coverage.',
+  keywords: [
+    'construction estimation FAQ', 'estimation questions', 'cost estimation help',
+    'how estimation works', 'estimation pricing', 'construction estimate turnaround time',
+    'estimation accuracy', 'how to get construction estimate', 'construction bid help',
+    'estimation process explained', 'construction takeoff FAQ', 'free estimate questions',
+    'quantity takeoff process', 'material takeoff FAQ', 'cost estimation methodology',
+  ],
+  alternates: { canonical: 'https://ozestimations.com/faqs/' },
   openGraph: {
-    title: 'FAQs | OZ Estimation',
-    description: 'Get answers to common questions about construction cost estimation services, process, and pricing.',
-    url: 'https://ozestimations.com/faqs',
+    title: 'Construction Estimation FAQ | OZ Estimation',
+    description: 'Pricing, turnaround, accuracy, and process — everything you need to know about our estimation services.',
+    url: 'https://ozestimations.com/faqs/',
+    siteName: 'OZ Estimation',
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Construction Estimation FAQ' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ozestimation',
+    title: 'Estimation FAQ | OZ Estimation',
+    description: '24-48 hour turnaround. 98% accuracy. All trades covered.',
+    images: ['/og-image.png'],
   },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  url: 'https://ozestimations.com/faqs',
+  name: 'Construction Estimation FAQ',
+  description: 'Frequently asked questions about construction cost estimation services, pricing, process, and turnaround time.',
   mainEntity: generalFaqs.map(faq => ({
     '@type': 'Question',
     name: faq.q,
@@ -32,12 +51,25 @@ const jsonLd = {
   })),
 };
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
+    { '@type': 'ListItem', position: 2, name: 'FAQs', item: 'https://ozestimations.com/faqs' },
+  ],
+};
+
 export default function FAQsPage() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* Hero */}

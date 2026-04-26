@@ -10,20 +10,63 @@ import { serviceImages, heroImages } from '@/data/images';
 import { HiArrowRight } from 'react-icons/hi2';
 
 export const metadata = {
-  title: 'Our Services — Comprehensive Construction Estimation Solutions',
-  description: 'Explore our full range of construction cost estimation services: general estimation, MEP, structural trades, building envelope, interior finishes, 3D rendering & more. Accurate takeoffs delivered in 24-48 hours.',
-  keywords: ['construction estimation services', 'MEP estimation', 'structural estimation', 'cost takeoff services', 'building estimation', 'quantity takeoff', '3D rendering'],
-  alternates: { canonical: 'https://ozestimations.com/services' },
+  title: 'Services — 34+ Construction Estimation Services',
+  description: 'Explore 34+ construction cost estimation services: MEP, structural, envelope, interior finishes, sitework, 3D rendering & more. ASPE-certified. 24-48 hour delivery.',
+  keywords: [
+    'construction estimation services', 'MEP estimation', 'structural estimation', 'cost takeoff services',
+    'building estimation', 'quantity takeoff', '3D rendering', 'plumbing estimation services',
+    'electrical estimation services', 'HVAC estimation', 'concrete estimation services',
+    'steel estimation', 'roofing estimation services', 'drywall estimation',
+    'flooring estimation', 'painting estimation', 'demolition estimation',
+    'earthwork estimation', 'landscaping estimation', 'framing estimation',
+    'masonry estimation services', 'carpentry estimation', 'insulation estimation',
+    'complete construction estimation', 'all trade estimation', 'CSI division estimation',
+  ],
+  alternates: { canonical: 'https://ozestimations.com/services/' },
   openGraph: {
-    title: 'Construction Estimation Services | OZ Estimation',
-    description: '8 service categories, 34+ specialized estimation services. From residential to industrial — we cover every trade.',
-    url: 'https://ozestimations.com/services',
+    title: 'Estimation Services — All Trades | OZ Estimation',
+    description: '8 categories, 34+ specialized services. MEP, structural, envelope, finishes & more. ASPE-certified.',
+    url: 'https://ozestimations.com/services/',
+    siteName: 'OZ Estimation',
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Construction Estimation Services' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ozestimation',
+    title: 'Estimation Services | OZ Estimation',
+    description: '34+ specialized estimation services. All CSI divisions. ASPE-certified.',
+    images: ['/og-image.png'],
   },
 };
+
+const servicesJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Construction Estimation Services',
+    description: 'Complete range of 34+ construction cost estimation services organized by trade. All CSI divisions covered.',
+    url: 'https://ozestimations.com/services',
+    inLanguage: 'en-US',
+    mainEntity: { '@id': 'https://ozestimations.com/#servicelist' },
+    provider: { '@id': 'https://ozestimations.com/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ozestimations.com/services' },
+    ],
+  },
+];
 
 export default function ServicesPage() {
   return (
     <>
+      {servicesJsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       {/* Hero */}
       <section className="relative min-h-[60vh] md:min-h-[65vh] py-14 md:py-20 flex items-end overflow-hidden">
         <div className="absolute inset-0">

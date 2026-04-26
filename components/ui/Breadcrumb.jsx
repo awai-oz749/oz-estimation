@@ -17,26 +17,8 @@ export default function Breadcrumb() {
     return { href, label };
   });
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com/' },
-      ...crumbs.map((crumb, i) => ({
-        '@type': 'ListItem',
-        position: i + 2,
-        name: crumb.label,
-        item: `https://ozestimations.com${crumb.href}`,
-      })),
-    ],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-custom/80 flex-wrap">
         <Link href="/" className="hover:text-gold transition-colors flex items-center gap-1.5 font-medium">
           <HiHomeModern className="w-4 h-4 text-gold/60" /> Home

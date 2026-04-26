@@ -2,8 +2,32 @@ import AnimatedSection from '@/components/ui/AnimatedSection';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata = {
-  title: 'Privacy Policy',
-  description: 'Read the OZ Estimation privacy policy to understand how we collect, use, and protect your personal information.',
+  title: 'Privacy Policy — How We Protect Your Data',
+  description: 'Read OZ Estimation\'s privacy policy. Learn how we collect, use, store, and protect your personal information, project plans, and estimation data. GDPR and CCPA compliant.',
+  keywords: ['OZ Estimation privacy policy', 'data protection', 'construction estimation privacy', 'information security'],
+  alternates: { canonical: 'https://ozestimations.com/privacy-policy/' },
+  openGraph: {
+    title: 'Privacy Policy | OZ Estimation',
+    description: 'How OZ Estimation collects, uses, and protects your information.',
+    url: 'https://ozestimations.com/privacy-policy',
+    siteName: 'OZ Estimation',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    site: '@ozestimation',
+    title: 'Privacy Policy | OZ Estimation',
+    description: 'How we collect, use, and protect your personal information and project data.',
+  },
+};
+
+const privacyJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://ozestimations.com/privacy-policy' },
+  ],
 };
 
 export default function PrivacyPolicyPage() {
@@ -42,12 +66,16 @@ export default function PrivacyPolicyPage() {
     },
     {
       title: 'Contact Us',
-      content: 'If you have questions about this privacy policy or our data practices, please contact us at info@ozestimations.com or call +1 (555) 123-4567. You can also write to us at 425 W 11th St, 2nd Floor, Los Angeles, CA 90015.',
+      content: 'If you have questions about this privacy policy or our data practices, please contact us at info@ozestimations.com. You can also write to us at 425 W 11th St, 2nd Floor, Los Angeles, CA 90015.',
     },
   ];
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyJsonLd) }}
+      />
       {/* Hero */}
       <section className="relative py-14 md:py-20 bg-gradient-to-b from-navy-light to-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

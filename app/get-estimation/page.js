@@ -6,23 +6,75 @@ import ContactCard from '@/components/ui/ContactCard';
 import CTABanner from '@/components/ui/CTABanner';
 import { CONTACT } from '@/lib/constants';
 import { heroImages } from '@/data/images';
-import { HiOutlinePhone, HiOutlineEnvelope, HiOutlineMapPin, HiOutlineClock } from 'react-icons/hi2';
+import { HiOutlineEnvelope, HiOutlineMapPin, HiOutlineClock } from 'react-icons/hi2';
 
 export const metadata = {
-  title: 'Get Free Estimation — Request Your Construction Cost Quote',
-  description: 'Request a free, accurate construction cost estimation from OZ Estimation. Upload your plans and get a detailed quote within 24-48 hours. No obligation, 98% accuracy guaranteed.',
-  keywords: ['free construction estimate', 'get cost estimation', 'construction quote', 'free bid estimate', 'upload plans', 'request quote'],
-  alternates: { canonical: 'https://ozestimations.com/get-estimation' },
+  title: 'Get Free Estimation — Upload Plans, Quote in 24-48h',
+  description: 'Upload your blueprints and get a free construction cost estimation in 24-48 hours. Detailed takeoffs, labor analysis & cost breakdowns. 98% accuracy. No obligation.',
+  keywords: [
+    'free construction estimate', 'get cost estimation', 'construction quote',
+    'free bid estimate', 'upload plans for estimate', 'request construction quote',
+    'free takeoff services', 'construction estimate online', 'get blueprint estimate',
+    'free project estimate', 'construction cost quote free', 'submit plans for estimate',
+    'online construction estimator', 'request bid estimate', 'free quantity takeoff',
+    'construction plan review', 'free material takeoff', 'estimate my project',
+  ],
+  alternates: { canonical: 'https://ozestimations.com/get-estimation/' },
   openGraph: {
-    title: 'Get Free Estimation | OZ Estimation',
-    description: 'Upload your plans and get a free, detailed construction cost estimation in 24-48 hours.',
-    url: 'https://ozestimations.com/get-estimation',
+    title: 'Get Free Construction Estimation | OZ Estimation',
+    description: 'Upload plans, get a free detailed cost estimation in 24-48 hours. No obligation. 98% accuracy.',
+    url: 'https://ozestimations.com/get-estimation/',
+    siteName: 'OZ Estimation',
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Get Free Construction Estimation' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@ozestimation',
+    title: 'Free Estimation | OZ Estimation',
+    description: 'Upload plans. Detailed cost estimate in 24-48 hours. Free. 98% accuracy.',
+    images: ['/og-image.png'],
   },
 };
+
+const estimationJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Get Free Construction Cost Estimation',
+    description: 'Upload your construction plans and get a free, detailed cost estimation within 24-48 hours.',
+    url: 'https://ozestimations.com/get-estimation',
+    mainEntity: {
+      '@type': 'Service',
+      name: 'Free Construction Cost Estimation',
+      description: 'Professional construction cost estimation with detailed material takeoffs, labor analysis, and comprehensive cost breakdowns.',
+      provider: { '@id': 'https://ozestimations.com/#organization' },
+      areaServed: { '@type': 'Country', name: 'United States' },
+      offers: {
+        '@type': 'Offer',
+        price: '0',
+        priceCurrency: 'USD',
+        description: 'Free initial construction cost estimation',
+        availability: 'https://schema.org/InStock',
+      },
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
+      { '@type': 'ListItem', position: 2, name: 'Get Free Estimation', item: 'https://ozestimations.com/get-estimation' },
+    ],
+  },
+];
 
 export default function GetEstimationPage() {
   return (
     <>
+      {estimationJsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       {/* Hero */}
       <section className="relative min-h-[55vh] md:min-h-[60vh] py-14 md:py-20 flex items-end overflow-hidden">
         <div className="absolute inset-0">
@@ -58,16 +110,11 @@ export default function GetEstimationPage() {
 
             {/* Contact Sidebar */}
             <div className="space-y-4">
-              <ContactCard icon={<HiOutlinePhone />} label="Call Us">
-                <a href={`tel:${CONTACT.phone1}`} className="hover:text-gold transition-colors block">{CONTACT.phone1}</a>
-                <a href={`tel:${CONTACT.phone2}`} className="hover:text-gold transition-colors block">{CONTACT.phone2}</a>
-              </ContactCard>
               <ContactCard icon={<HiOutlineEnvelope />} label="Email Us">
                 <a href={`mailto:${CONTACT.email}`} className="hover:text-gold transition-colors">{CONTACT.email}</a>
               </ContactCard>
               <ContactCard icon={<HiOutlineMapPin />} label="Visit Us">
-                <p>{CONTACT.address1.full}</p>
-                <p className="mt-1">{CONTACT.address2.full}</p>
+                <p>{CONTACT.address.full}</p>
               </ContactCard>
               <ContactCard icon={<HiOutlineClock />} label="Working Hours">
                 <p>Mon–Fri: 8:00 AM – 6:00 PM</p>

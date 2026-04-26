@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiBars3, HiXMark, HiChevronDown, HiPhone, HiEnvelope, HiChevronRight } from 'react-icons/hi2';
+import { HiBars3, HiXMark, HiChevronDown, HiEnvelope, HiChevronRight } from 'react-icons/hi2';
 import { navigation } from '@/data/navigation';
 import { CONTACT } from '@/lib/constants';
 import MobileMenu from './MobileMenu';
@@ -51,9 +51,6 @@ export default function Header() {
       <div className="bg-gradient-to-r from-navy-dark via-navy-light to-navy-dark border-b border-white/5 hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-xs text-slate-custom">
           <div className="flex items-center gap-6">
-            <a href={`tel:${CONTACT.phone1}`} className="flex items-center gap-1.5 hover:text-gold transition-colors">
-              <HiPhone className="w-3 h-3 text-gold/60" /> {CONTACT.phone1}
-            </a>
             <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-1.5 hover:text-gold transition-colors">
               <HiEnvelope className="w-3 h-3 text-gold/60" /> {CONTACT.email}
             </a>

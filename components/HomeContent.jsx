@@ -40,6 +40,8 @@ const softwareLogos = [
   { name: 'Trimble', icon: '/images/software/trimble.svg' },
   { name: 'Navisworks', icon: '/images/software/navisworks.svg' },
   { name: 'ConEst', icon: '/images/software/conest.svg' },
+  { name: 'Buildxact', icon: '/images/software/buildxact.svg' },
+  { name: 'Cubit Estimating', icon: '/images/software/cubit.svg' },
 ];
 
 function HeroSection() {
@@ -185,27 +187,33 @@ function SoftwareScroller() {
   const items = [...softwareLogos, ...softwareLogos];
 
   return (
-    <section className="relative py-8 md:py-12 overflow-hidden border-y border-white/[0.04]">
+    <section className="relative py-12 md:py-16 overflow-hidden border-y border-white/[0.04]">
       <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/20 to-navy" />
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-slate-custom/60 text-xs uppercase tracking-widest font-semibold mb-6">
-          Software & Tools We Use
-        </p>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+        <AnimatedSection className="text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4 text-xs font-semibold tracking-wide uppercase bg-gold/10 text-gold border border-gold/20">
+            <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
+            Industry Standard
+          </div>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight">Software & Tools We Use</h2>
+          <p className="text-slate-custom max-w-xl mx-auto text-sm md:text-base">We leverage the best construction estimation software for precise results.</p>
+        </AnimatedSection>
       </div>
       <div className="relative overflow-hidden">
         {/* Left/right fade masks */}
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-navy to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-navy to-transparent z-10 pointer-events-none" />
-        <div className="flex animate-scroll-x gap-10 w-max">
+        <div className="flex animate-scroll-x gap-12 md:gap-16 w-max items-center">
           {items.map((sw, i) => (
-            <div key={`${sw.name}-${i}`} className="flex-shrink-0 group">
-              <div className="h-10 md:h-12 w-auto opacity-60 group-hover:opacity-100 transition-opacity duration-300 grayscale group-hover:grayscale-0">
+            <div key={`${sw.name}-${i}`} className="flex-shrink-0 group flex flex-col items-center gap-3">
+              <div className="bg-white rounded-2xl p-4 md:p-5 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                 <img
                   src={sw.icon}
                   alt={sw.name}
-                  className="h-full w-auto object-contain"
+                  className="h-12 w-12 md:h-16 md:w-16 object-contain"
                 />
               </div>
+              <span className="text-slate-custom text-xs md:text-sm font-medium group-hover:text-white transition-colors">{sw.name}</span>
             </div>
           ))}
         </div>
@@ -327,13 +335,13 @@ export default function HomeContent() {
   return (
     <>
       <HeroSection />
-      <SoftwareScroller />
       <StatsSection />
       <ServicesSection />
       <WhyChooseUs />
       <WorkProcess />
       <TestimonialsSection />
       <AreaGrid />
+      <SoftwareScroller />
       <CTABanner />
     </>
   );

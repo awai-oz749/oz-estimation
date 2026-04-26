@@ -2,6 +2,12 @@ import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import { HiArrowLeft } from 'react-icons/hi2';
 
+export const metadata = {
+  title: 'Page Not Found',
+  description: 'The page you are looking for does not exist. Browse our construction estimation services or return to the homepage.',
+  robots: { index: false, follow: true },
+};
+
 export default function NotFound() {
   return (
     <section className="min-h-[70vh] flex items-center justify-center px-4">
