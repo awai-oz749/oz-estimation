@@ -33,7 +33,7 @@ export default function MobileMenu({ isOpen, onClose }) {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-navy/95 backdrop-blur-2xl border-l border-white/[0.06] overflow-y-auto"
+            className="absolute right-0 top-0 bottom-0 w-[85%] max-w-sm bg-white backdrop-blur-2xl border-l border-navy/10 overflow-y-auto shadow-2xl shadow-navy/20"
           >
             <div className="p-6 pt-20">
               {navigation.map((item, i) => (
@@ -48,7 +48,7 @@ export default function MobileMenu({ isOpen, onClose }) {
                     <>
                       <button
                         onClick={() => setOpenCategory(openCategory === item.label ? null : item.label)}
-                        className="w-full flex items-center justify-between py-3 text-white font-semibold text-base hover:text-gold transition-colors"
+                        className="w-full flex items-center justify-between py-3 text-navy font-semibold text-base hover:text-amber transition-colors"
                       >
                         {item.label}
                         <motion.span
@@ -73,7 +73,7 @@ export default function MobileMenu({ isOpen, onClose }) {
                                   <Link
                                     href={cat.href}
                                     onClick={onClose}
-                                    className="text-gold text-sm font-medium block py-1"
+                                    className="text-amber text-sm font-semibold block py-1"
                                   >
                                     {cat.label}
                                   </Link>
@@ -84,7 +84,7 @@ export default function MobileMenu({ isOpen, onClose }) {
                                           key={sub.href}
                                           href={sub.href}
                                           onClick={onClose}
-                                          className="text-slate-custom text-xs block py-1 hover:text-white transition-colors"
+                                          className="text-navy/70 text-xs block py-1 hover:text-amber transition-colors"
                                         >
                                           {sub.label}
                                         </Link>
@@ -102,20 +102,20 @@ export default function MobileMenu({ isOpen, onClose }) {
                     <Link
                       href={item.href}
                       onClick={onClose}
-                      className="block py-3 text-white font-semibold text-base hover:text-gold transition-colors"
+                      className="block py-3 text-navy font-semibold text-base hover:text-amber transition-colors"
                     >
                       {item.label}
                     </Link>
                   )}
                 </motion.div>
               ))}
-              <div className="mt-8 pt-6 border-t border-white/[0.06]">
+              <div className="mt-8 pt-6 border-t border-navy/10">
                 <Link
                   href="/get-estimation"
                   onClick={onClose}
-                  className="block w-full text-center bg-gradient-to-r from-gold to-amber text-navy font-bold py-3.5 rounded-xl hover:from-amber hover:to-gold transition-all shimmer-btn"
+                  className="block w-full text-center bg-gold text-black font-bold uppercase tracking-wide py-3.5 rounded-md hover:bg-amber transition-all shadow-md shadow-gold/20"
                 >
-                  Get Free Quote
+                  Get An Estimate
                 </Link>
               </div>
             </div>

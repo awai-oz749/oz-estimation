@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiBars3, HiXMark, HiChevronDown, HiEnvelope, HiChevronRight } from 'react-icons/hi2';
+import { HiBars3, HiXMark, HiChevronDown, HiEnvelope, HiClock, HiChevronRight } from 'react-icons/hi2';
 import { navigation } from '@/data/navigation';
 import { CONTACT } from '@/lib/constants';
 import MobileMenu from './MobileMenu';
@@ -47,24 +47,31 @@ export default function Header() {
 
   return (
     <>
+      {/* Top brand strip */}
+      <div className="top-strip" />
+
       {/* Top Banner */}
-      <div className="bg-gradient-to-r from-navy-dark via-navy-light to-navy-dark border-b border-white/5 hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-xs text-slate-custom">
-          <div className="flex items-center gap-6">
-            <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-1.5 hover:text-gold transition-colors">
-              <HiEnvelope className="w-3 h-3 text-gold/60" /> {CONTACT.email}
+      <div className="bg-white border-b border-navy/10 hidden md:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-xs text-navy/70">
+          <div className="flex items-center gap-5">
+            <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-1.5 hover:text-amber transition-colors font-semibold">
+              <HiEnvelope className="w-3.5 h-3.5 text-amber" /> {CONTACT.email}
             </a>
+            <span className="text-navy/20">|</span>
+            <span className="flex items-center gap-1.5">
+              <HiClock className="w-3.5 h-3.5 text-amber" /> {CONTACT.hours}
+            </span>
           </div>
-          <div className="shimmer-text font-semibold tracking-wide">Professional Construction Cost Estimation Services</div>
+          <div className="text-navy/60 font-semibold tracking-[0.18em] uppercase text-[10px]">Professional Construction Cost Estimation</div>
         </div>
       </div>
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-500 ${
+        className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-navy/80 backdrop-blur-2xl shadow-2xl shadow-black/30 border-b border-white/[0.06]' 
-            : 'bg-navy/40 backdrop-blur-md'
+            ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-navy/5 border-b border-navy/10' 
+            : 'bg-white border-b border-navy/5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,10 +90,10 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
-                    className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
                       pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
-                        ? 'text-gold'
-                        : 'text-white/80 hover:text-white hover:bg-white/5'
+                        ? 'text-amber'
+                        : 'text-navy hover:text-amber'
                     }`}
                   >
                     {item.label}
@@ -98,15 +105,22 @@ export default function Header() {
 
             {/* CTA + Mobile Toggle */}
             <div className="flex items-center gap-3">
+              <a
+                href={`mailto:${CONTACT.email}`}
+                aria-label="Email us"
+                className="hidden md:inline-flex items-center justify-center w-11 h-11 rounded-full bg-gold text-black hover:bg-amber transition-all duration-300 shadow-md shadow-gold/30 hover:shadow-lg hover:shadow-gold/40 hover:-translate-y-0.5"
+              >
+                <HiEnvelope className="w-5 h-5" />
+              </a>
               <Link
                 href="/get-estimation"
-                className="hidden lg:inline-flex items-center gap-2 bg-gradient-to-r from-gold to-amber text-navy font-bold text-sm px-6 py-2.5 rounded-xl hover:from-amber hover:to-gold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-gold/25 shimmer-btn"
+                className="hidden lg:inline-flex items-center gap-2 bg-gold text-black font-bold text-sm tracking-wide uppercase px-6 py-3 rounded-md hover:bg-amber transition-all duration-300 shadow-md shadow-gold/20"
               >
-                Get Free Quote
+                Get An Estimate
               </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden p-2 text-white hover:text-gold transition-colors"
+                className="lg:hidden p-2 text-navy hover:text-gold transition-colors"
                 aria-label="Toggle menu"
               >
                 {mobileOpen ? <HiXMark className="w-6 h-6" /> : <HiBars3 className="w-6 h-6" />}
@@ -128,18 +142,18 @@ export default function Header() {
               onMouseLeave={handleMouseLeave}
             >
               <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-                <div className="bg-navy-light rounded-2xl shadow-2xl shadow-black/60 border border-white/[0.08] overflow-hidden">
+                <div className="bg-white rounded-md shadow-2xl shadow-navy/15 border border-navy/10 overflow-hidden">
                   <div className="flex">
                     {/* Left Panel — Category list */}
-                    <div className="w-64 flex-shrink-0 bg-navy-dark/50 border-r border-white/[0.06] py-3">
+                    <div className="w-64 flex-shrink-0 bg-light-bg border-r border-navy/10 py-3">
                       {servicesNav.children.map((category) => (
                         <Link
                           key={category.label}
                           href={category.href}
                           className={`flex items-center justify-between px-5 py-2.5 text-sm font-medium transition-all ${
                             activeCategory === category.label
-                              ? 'text-gold bg-gold/[0.08] border-r-2 border-gold'
-                              : 'text-white/80 hover:text-gold hover:bg-white/[0.03]'
+                              ? 'text-amber bg-gold/[0.08] border-r-2 border-gold'
+                              : 'text-navy/80 hover:text-amber hover:bg-white'
                           }`}
                           onMouseEnter={() => setActiveCategory(category.label)}
                         >
@@ -150,14 +164,14 @@ export default function Header() {
                     </div>
 
                     {/* Right Panel — Sub-services for active category */}
-                    <div className="flex-1 p-6 min-h-[280px] bg-navy-light">
+                    <div className="flex-1 p-6 min-h-[280px] bg-white">
                       {activeCategory ? (
                         (() => {
                           const cat = servicesNav.children.find(c => c.label === activeCategory);
                           if (!cat) return null;
                           return (
                             <div>
-                              <Link href={cat.href} className="text-gold font-bold text-base hover:text-amber transition-colors mb-4 block">
+                              <Link href={cat.href} className="text-amber font-bold text-base hover:text-navy transition-colors mb-4 block">
                                 {cat.label} →
                               </Link>
                               {cat.children ? (
@@ -166,20 +180,20 @@ export default function Header() {
                                     <Link
                                       key={sub.href}
                                       href={sub.href}
-                                      className="text-white/70 text-sm hover:text-gold py-1.5 transition-colors hover:translate-x-1 inline-block"
+                                      className="text-navy/70 text-sm hover:text-amber py-1.5 transition-colors hover:translate-x-1 inline-block"
                                     >
                                       {sub.label}
                                     </Link>
                                   ))}
                                 </div>
                               ) : (
-                                <p className="text-slate-custom text-sm">View our {cat.label.toLowerCase()} services.</p>
+                                <p className="text-navy/60 text-sm">View our {cat.label.toLowerCase()} services.</p>
                               )}
                             </div>
                           );
                         })()
                       ) : (
-                        <div className="flex items-center justify-center h-full text-slate-custom/50 text-sm">
+                        <div className="flex items-center justify-center h-full text-navy/40 text-sm">
                           <p>Hover over a category to see services</p>
                         </div>
                       )}
@@ -187,9 +201,9 @@ export default function Header() {
                   </div>
 
                   {/* Bottom bar */}
-                  <div className="border-t border-white/[0.06] px-6 py-3 flex items-center justify-between bg-navy-dark/40">
-                    <span className="text-slate-custom/60 text-xs">34+ specialized estimation services</span>
-                    <Link href="/services" className="text-gold text-xs font-semibold hover:text-amber transition-colors">
+                  <div className="border-t border-navy/10 px-6 py-3 flex items-center justify-between bg-light-bg">
+                    <span className="text-navy/60 text-xs">34+ specialized estimation services</span>
+                    <Link href="/services" className="text-amber text-xs font-semibold hover:text-navy transition-colors">
                       View All Services →
                     </Link>
                   </div>

@@ -2,7 +2,7 @@ import HomeContent from '@/components/HomeContent';
 
 export const metadata = {
   title: 'OZ Estimation | Construction Cost Estimation USA',
-  description: 'Accurate construction cost estimation for residential, commercial & industrial projects. Trusted by 1,000+ contractors. ASPE-certified. Free quotes in 24-48 hours.',
+  description: 'Accurate construction cost estimation for residential, commercial & industrial projects. Trusted by 1,000+ contractors. ASPE-certified. 24-48 hour quotes.',
   keywords: [
     'construction cost estimation', 'cost estimator', 'quantity takeoff', 'material takeoff',
     'construction bidding', 'contractor estimation', 'residential estimation', 'commercial estimation',

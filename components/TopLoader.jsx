@@ -5,7 +5,7 @@ import NextTopLoader from 'nextjs-toploader';
 export default function TopLoader() {
   return (
     <NextTopLoader
-      color="#D4A843"
+      color="#FBB923"
       initialPosition={0.08}
       crawlSpeed={200}
       height={3}
@@ -13,7 +13,7 @@ export default function TopLoader() {
       showSpinner={false}
       easing="ease"
       speed={200}
-      shadow="0 0 10px #D4A843, 0 0 5px #F5A623"
+      shadow="0 0 10px #FBB923, 0 0 5px #E0A010"
     />
   );
 }

@@ -44,11 +44,11 @@
     </linearGradient>
     <linearGradient id="gold-line" x1="0" y1="0" x2="1200" y2="0">
       <stop offset="0%" stop-color="#B8922E"/>
-      <stop offset="50%" stop-color="#F5A623"/>
+      <stop offset="50%" stop-color="#FBB923"/>
       <stop offset="100%" stop-color="#B8922E"/>
     </linearGradient>
     <linearGradient id="logo-grad" x1="430" y1="140" x2="500" y2="210">
-      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="0%" stop-color="#FBB923"/>
       <stop offset="100%" stop-color="#D4A843"/>
     </linearGradient>
   </defs>

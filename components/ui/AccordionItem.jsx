@@ -11,10 +11,10 @@ export default function AccordionItem({ question, answer, defaultOpen = false })
     <div className={`glass-card rounded-xl overflow-hidden mb-3 transition-all duration-300 ${isOpen ? 'glow-gold' : ''}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-white/[0.03] transition-colors cursor-pointer"
+        className="w-full flex items-center justify-between p-5 md:p-6 text-left hover:bg-light-bg transition-colors cursor-pointer"
         aria-expanded={isOpen}
       >
-        <span className="text-white font-semibold text-sm md:text-base pr-4">{question}</span>
+        <span className="text-navy font-semibold text-sm md:text-base pr-4">{question}</span>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}

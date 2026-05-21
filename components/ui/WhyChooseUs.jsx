@@ -15,7 +15,7 @@ const iconMap = {
 
 export default function WhyChooseUs({ light = false }) {
   return (
-    <section className={`relative py-12 md:py-16 overflow-hidden ${light ? 'bg-light' : ''}`}>
+    <section className={`relative py-16 md:py-24 overflow-hidden ${light ? 'bg-light' : ''}`}>
       {/* Ambient orb */}
       {!light && <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold/[0.03] rounded-full blur-[120px] pointer-events-none" />}
       
@@ -25,31 +25,27 @@ export default function WhyChooseUs({ light = false }) {
             <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
             Our Advantages
           </div>
-          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-5 tracking-tight ${light ? 'text-navy' : 'text-white'}`}>
+          <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase mb-4 tracking-tight leading-[1.05] text-navy`}>
             Why Choose OZ Estimation?
           </h2>
-          <p className={`max-w-2xl mx-auto text-base md:text-lg ${light ? 'text-navy/70' : 'text-slate-custom'}`}>
-            We deliver precise, reliable cost estimations that help you win more bids and complete projects on budget.
-          </p>
-          <div className="mt-6 flex items-center gap-1 justify-center">
-            <div className="h-[2px] w-8 bg-gold/30 rounded-full" />
-            <div className="h-[2px] w-16 bg-gradient-to-r from-gold to-amber rounded-full" />
-            <div className="h-[2px] w-8 bg-gold/30 rounded-full" />
+          <div className="mb-5 flex justify-center">
+            <span className="heading-bar" />
           </div>
+          <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-custom">
+            OZ Estimation delivers precise, reliable cost estimations that help you win more bids and complete projects on budget.
+          </p>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
           {WHY_CHOOSE.map((item, i) => {
             const Icon = iconMap[i] || HiOutlineShieldCheck;
             return (
               <AnimatedSection key={i} delay={i * 0.1}>
-                <div className={`rounded-2xl p-7 md:p-9 h-full transition-all duration-500 hover:translate-y-[-4px] ${
-                  light ? 'bg-white border border-gray-200 hover:border-gold/40 hover:shadow-xl' : 'glass-card hover:glow-gold'
-                }`}>
-                  <div className="w-14 h-14 bg-gradient-to-br from-gold/20 to-amber/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="bg-white border border-navy/10 border-l-[3px] border-l-navy rounded-md p-7 md:p-9 h-full transition-all duration-500 hover:translate-y-[-4px] hover:border-l-gold hover:border-navy/20 hover:shadow-xl hover:shadow-navy/5">
+                  <div className="w-14 h-14 bg-navy rounded-md flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="w-7 h-7 text-gold" />
                   </div>
-                  <h3 className={`text-lg font-bold mb-3 ${light ? 'text-navy' : 'text-white'}`}>{item.title}</h3>
-                  <p className={`text-sm md:text-base leading-relaxed ${light ? 'text-navy/70' : 'text-slate-custom'}`}>{item.desc}</p>
+                  <h3 className="font-display text-xl md:text-2xl font-bold uppercase tracking-tight mb-3 text-navy">{item.title}</h3>
+                  <p className="text-sm md:text-base leading-relaxed text-slate-custom">{item.desc}</p>
                 </div>
               </AnimatedSection>
             );

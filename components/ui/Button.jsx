@@ -4,9 +4,9 @@ export default function Button({ children, href, variant = 'primary', className 
   const base = 'inline-flex items-center justify-center gap-2 font-bold rounded-xl transition-all duration-300 cursor-pointer text-sm md:text-base';
   
   const variants = {
-    primary: 'bg-gradient-to-r from-gold to-amber text-navy px-7 py-3.5 hover:from-amber hover:to-gold hover:shadow-xl hover:shadow-gold/25 hover:scale-105 shimmer-btn',
-    secondary: 'border border-gold/40 text-gold hover:bg-gold/10 hover:border-gold px-7 py-3.5 hover:scale-105 hover:shadow-lg hover:shadow-gold/10 backdrop-blur-sm',
-    ghost: 'text-gold hover:text-amber px-4 py-2 hover:underline underline-offset-4',
+    primary: 'bg-gold text-black px-7 py-3.5 hover:bg-amber hover:shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5',
+    secondary: 'bg-navy text-white px-7 py-3.5 hover:bg-navy-dark hover:shadow-xl hover:shadow-navy/25 hover:-translate-y-0.5',
+    ghost: 'text-amber hover:text-navy px-4 py-2 hover:underline underline-offset-4',
   };
 
   const classes = `${base} ${variants[variant] || variants.primary} ${className}`;

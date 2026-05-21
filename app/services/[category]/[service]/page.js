@@ -112,8 +112,8 @@ export default async function ServicePage({ params }) {
       <section className="relative min-h-[60vh] md:min-h-[65vh] py-14 md:py-20 flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image src={subServiceImages[service] || subServiceImages['subcontractor-estimation']} alt={s.title} fill className="object-cover object-[center_35%]" sizes="100vw" quality={90} />
-          <div className="absolute inset-0 bg-navy/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/30 to-navy/80" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb />
@@ -122,11 +122,11 @@ export default async function ServicePage({ params }) {
               <Link href={`/services/${category}`} className="hover:text-amber transition-colors">{cat.title}</Link>
               <span>/</span>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-white mb-6 leading-[1.05] tracking-tight">
               {s.title.split(' ').slice(0, -1).join(' ')}{' '}
               <span className="text-gold">{s.title.split(' ').slice(-1)}</span>
             </h1>
-            <p className="text-slate-custom text-base md:text-lg leading-relaxed">{s.description}</p>
+            <p className="text-white/85 text-base md:text-lg leading-relaxed">{s.description}</p>
           </AnimatedSection>
         </div>
       </section>
@@ -137,7 +137,7 @@ export default async function ServicePage({ params }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <AnimatedSection>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Service Overview</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">Service Overview</h2>
                 <p className="text-slate-custom leading-relaxed mb-6">{s.longDescription}</p>
                 <p className="text-slate-custom leading-relaxed mb-6">
                   At OZ Estimation, our team of experienced professionals uses the latest software tools and industry best practices to deliver comprehensive {s.title.toLowerCase()} that meet the highest standards of accuracy and detail. Whether you need a quick preliminary estimate or a full detailed takeoff, we have the expertise to help.
@@ -149,10 +149,10 @@ export default async function ServicePage({ params }) {
 
               {/* Features */}
               <AnimatedSection className="mt-12">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-6">What&apos;s Included</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-navy mb-6">What&apos;s Included</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {s.features.map((f, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-navy-light border border-white/5 rounded-xl p-4">
+                    <div key={i} className="flex items-start gap-3 bg-white border border-navy/10 shadow-sm rounded-xl p-4">
                       <HiOutlineCheckCircle className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                       <span className="text-slate-custom text-sm md:text-base">{f}</span>
                     </div>
@@ -162,7 +162,7 @@ export default async function ServicePage({ params }) {
 
               {/* Benefits */}
               <AnimatedSection className="mt-12">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-6">Benefits</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-navy mb-6">Benefits</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     'Win more bids with accurate pricing',
@@ -184,16 +184,16 @@ export default async function ServicePage({ params }) {
             {/* Sidebar */}
             <div>
               <AnimatedSection delay={0.2}>
-                <div className="bg-navy-light border border-white/5 rounded-2xl p-6 sticky top-24">
-                  <h3 className="text-white font-bold text-lg mb-4">Get a Free Quote</h3>
+                <div className="bg-white border border-navy/10 shadow-sm rounded-md p-6 sticky top-24">
+                  <h3 className="text-navy font-bold text-lg mb-4">Get a Free Quote</h3>
                   <p className="text-slate-custom text-sm mb-6">
                     Upload your plans and receive a detailed {s.title.toLowerCase()} within 24-48 hours.
                   </p>
                   <Button href="/get-estimation" variant="primary" className="w-full mb-6">
                     Request Estimation <HiArrowRight className="w-4 h-4" />
                   </Button>
-                  <div className="border-t border-white/5 pt-6">
-                    <h4 className="text-white font-semibold text-sm mb-3">Related Services</h4>
+                  <div className="border-t border-navy/10 pt-6">
+                    <h4 className="text-navy font-semibold text-sm mb-3">Related Services</h4>
                     <ul className="space-y-2">
                       {otherServices.map((os) => (
                         <li key={os.slug}>

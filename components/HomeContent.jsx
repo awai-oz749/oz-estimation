@@ -76,9 +76,9 @@ function HeroSection() {
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-navy/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/30" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/55 via-navy/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent" />
       </div>
 
       {/* Floating ambient orbs */}
@@ -86,7 +86,7 @@ function HeroSection() {
       <div className="absolute bottom-1/3 left-1/3 w-64 h-64 bg-amber/5 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(212,168,67,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,168,67,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(251,185,35,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(251,185,35,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
         <div className="max-w-4xl">
@@ -97,17 +97,17 @@ function HeroSection() {
             className="inline-flex items-center gap-2 bg-gold/[0.08] border border-gold/20 rounded-full px-5 py-2 mb-6 backdrop-blur-sm"
           >
             <span className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-            <span className="text-gold text-xs md:text-sm font-semibold tracking-wide">Trusted by 1000+ Contractors Nationwide</span>
+            <span className="text-gold text-xs md:text-sm font-semibold tracking-wide">Trusted by 1,000+ Contractors Nationwide</span>
           </motion.div>
 
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.15] mb-4 tracking-tight">
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-extrabold leading-[1.02] mb-5 tracking-[-0.01em] uppercase text-white">
             {heroWords.map((word, i) => (
               <motion.span
                 key={word}
                 initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 + i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="inline-block mr-2 md:mr-3"
+                className="inline-block mr-3 md:mr-4"
               >
                 {i === 0 ? <span className="text-gradient-gold">{word}</span> : word}
               </motion.span>
@@ -117,7 +117,7 @@ function HeroSection() {
               initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="inline-block"
+              className="inline-block text-gradient-gold"
             >
               Construction Estimations
             </motion.span>
@@ -127,9 +127,9 @@ function HeroSection() {
             initial={shouldReduceMotion ? {} : { opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="text-slate-custom text-sm md:text-base lg:text-lg max-w-2xl mb-6 leading-relaxed font-light"
+            className="text-white/85 text-sm md:text-base lg:text-lg max-w-2xl mb-6 leading-relaxed font-light"
           >
-            We deliver precise, detailed cost estimations for residential, commercial, and industrial construction projects. Win more bids with confidence.
+            OZ Estimation delivers precise, detailed cost estimations for residential, commercial, and industrial construction projects. Win more bids with confidence.
           </motion.p>
 
           <motion.div
@@ -139,10 +139,10 @@ function HeroSection() {
             className="flex flex-wrap gap-3"
           >
             <Button href="/get-estimation" variant="primary">
-              Get Free Estimation <HiArrowRight className="w-4 h-4" />
+              Submit Plans <HiArrowRight className="w-4 h-4" />
             </Button>
-            <Button href="/services" variant="secondary">
-              Our Services
+            <Button href="/about" variant="secondary">
+              Contact Us
             </Button>
           </motion.div>
 
@@ -150,10 +150,10 @@ function HeroSection() {
             initial={shouldReduceMotion ? {} : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 1.1 }}
-            className="mt-8 flex flex-wrap items-center gap-4 md:gap-6 text-slate-custom text-xs"
+            className="mt-8 flex flex-wrap items-center gap-4 md:gap-6 text-white/80 text-xs"
           >
             {TRUST_BADGES.map((badge, i) => (
-              <div key={i} className="flex items-center gap-2 bg-white/[0.03] rounded-full px-3 py-1.5 border border-white/[0.06]">
+              <div key={i} className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-1.5 border border-white/20 backdrop-blur-sm">
                 <HiOutlineShieldCheck className="w-3.5 h-3.5 text-gold" />
                 <span className="font-medium">{badge.title}</span>
               </div>
@@ -177,7 +177,7 @@ function HeroSection() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-navy to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
@@ -187,33 +187,32 @@ function SoftwareScroller() {
   const items = [...softwareLogos, ...softwareLogos];
 
   return (
-    <section className="relative py-12 md:py-16 overflow-hidden border-y border-white/[0.04]">
-      <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/20 to-navy" />
+    <section className="relative py-16 md:py-24 overflow-hidden border-y border-navy/10 bg-light-bg">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <AnimatedSection className="text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-4 text-xs font-semibold tracking-wide uppercase bg-gold/10 text-gold border border-gold/20">
             <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
             Industry Standard
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 tracking-tight">Software & Tools We Use</h2>
-          <p className="text-slate-custom max-w-xl mx-auto text-sm md:text-base">We leverage the best construction estimation software for precise results.</p>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy mb-3 tracking-tight">Software & Tools</h2>
+          <p className="text-slate-custom max-w-xl mx-auto text-sm md:text-base">OZ Estimation leverages the best construction estimation software for precise results.</p>
         </AnimatedSection>
       </div>
       <div className="relative overflow-hidden">
         {/* Left/right fade masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-navy to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-navy to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-light-bg to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-light-bg to-transparent z-10 pointer-events-none" />
         <div className="flex animate-scroll-x gap-12 md:gap-16 w-max items-center">
           {items.map((sw, i) => (
             <div key={`${sw.name}-${i}`} className="flex-shrink-0 group flex flex-col items-center gap-3">
-              <div className="bg-white rounded-2xl p-4 md:p-5 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+              <div className="bg-white rounded-md p-4 md:p-5 shadow-md group-hover:shadow-xl border border-navy/5 transition-all duration-300 group-hover:scale-105 group-hover:border-gold/40">
                 <img
                   src={sw.icon}
                   alt={sw.name}
                   className="h-12 w-12 md:h-16 md:w-16 object-contain"
                 />
               </div>
-              <span className="text-slate-custom text-xs md:text-sm font-medium group-hover:text-white transition-colors">{sw.name}</span>
+              <span className="text-navy/70 text-xs md:text-sm font-medium group-hover:text-amber transition-colors">{sw.name}</span>
             </div>
           ))}
         </div>
@@ -224,30 +223,33 @@ function SoftwareScroller() {
 
 function StatsSection() {
   return (
-    <section className="relative py-10 md:py-14 overflow-hidden">
-      {/* Premium background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light to-navy" />
-      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(rgba(212,168,67,0.4) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
-      
+    <section className="relative py-14 md:py-20 overflow-hidden" style={{ backgroundColor: '#2C3F65' }}>
+      {/* Gold accent strips */}
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-gold to-transparent" />
+
+      {/* Subtle pattern */}
+      <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: 'radial-gradient(rgba(251,185,35,0.7) 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+
+      {/* Ambient gold glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] bg-gold/[0.06] rounded-full blur-[120px] pointer-events-none" />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {STATS.map((stat, i) => (
-            <div key={stat.label} className="glass-card rounded-2xl p-2 transition-all duration-500 hover:glow-gold">
-              <StatCounter value={stat.value} suffix={stat.suffix} label={stat.label} />
+            <div key={stat.label} className="bg-white/[0.04] border border-white/10 rounded-md p-2 transition-all duration-500 hover:border-gold/60 hover:bg-white/[0.07]">
+              <StatCounter value={stat.value} suffix={stat.suffix} label={stat.label} dark />
             </div>
           ))}
         </div>
       </div>
-
-      {/* Divider */}
-      <div className="absolute bottom-0 left-0 right-0 divider-gold" />
     </section>
   );
 }
 
 function ServicesSection() {
   return (
-    <section className="relative py-12 md:py-16 overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden">
       {/* Ambient orb */}
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-gold/[0.03] rounded-full blur-[100px] pointer-events-none" />
       
@@ -287,10 +289,8 @@ function TestimonialsSection() {
   ];
 
   return (
-    <section className="relative py-12 md:py-16 overflow-hidden">
-      {/* Ambient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy-light/30 to-navy" />
-      <div className="absolute top-1/3 right-0 w-80 h-80 bg-gold/[0.03] rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative py-16 md:py-24 overflow-hidden bg-light-bg">
+      <div className="absolute top-1/3 right-0 w-80 h-80 bg-gold/[0.08] rounded-full blur-[120px] pointer-events-none" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
@@ -301,7 +301,7 @@ function TestimonialsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {testimonials.map((t, i) => (
             <AnimatedSection key={i} delay={i * 0.15}>
-              <div className="glass-card rounded-2xl p-7 md:p-9 h-full transition-all duration-500 hover:translate-y-[-4px] hover:glow-gold group">
+              <div className="glass-card rounded-md p-7 md:p-9 h-full transition-all duration-500 hover:translate-y-[-4px] hover:glow-gold group">
                 {/* Stars */}
                 <div className="flex gap-1 mb-5">
                   {[...Array(5)].map((_, j) => (
@@ -310,7 +310,7 @@ function TestimonialsSection() {
                 </div>
                 {/* Decorative quote */}
                 <div className="text-gold/10 text-6xl font-serif leading-none mb-2">&ldquo;</div>
-                <p className="text-slate-custom text-sm md:text-base leading-relaxed mb-8 -mt-6">
+                <p className="text-navy/75 text-sm md:text-base leading-relaxed mb-8 -mt-6">
                   {t.text}
                 </p>
                 <div className="flex items-center gap-4">
@@ -318,8 +318,8 @@ function TestimonialsSection() {
                     <Image src={t.img} alt={t.name} width={48} height={48} className="object-cover w-full h-full" />
                   </div>
                   <div>
-                    <div className="text-white font-bold text-sm">{t.name}</div>
-                    <div className="text-gold/60 text-xs font-medium">{t.role}</div>
+                    <div className="text-navy font-bold text-sm">{t.name}</div>
+                    <div className="text-amber text-xs font-medium">{t.role}</div>
                   </div>
                 </div>
               </div>

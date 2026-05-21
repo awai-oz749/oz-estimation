@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google';
+import { Inter, Barlow_Condensed } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,6 +9,13 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
+});
+
+const barlow = Barlow_Condensed({
+  subsets: ['latin'],
+  weight: ['500', '600', '700', '800', '900'],
+  display: 'swap',
+  variable: '--font-display',
 });
 
 export const metadata = {
@@ -205,13 +212,7 @@ const jsonLd = [
         },
       ],
     },
-    sameAs: [
-      'https://facebook.com/ozestimation',
-      'https://twitter.com/ozestimation',
-      'https://instagram.com/ozestimation',
-      'https://youtube.com/@ozestimation',
-      'https://linkedin.com/company/ozestimation',
-    ],
+    sameAs: [],
     slogan: 'Accurate. Professional. Reliable.',
     paymentAccepted: 'Visa, MasterCard, American Express, PayPal',
     currenciesAccepted: 'USD',
@@ -302,10 +303,8 @@ const jsonLd = [
     name: 'OZ Estimation | #1 Construction Cost Estimation Services in USA',
     isPartOf: { '@id': 'https://ozestimations.com/#website' },
     about: { '@id': 'https://ozestimations.com/#organization' },
-    description: 'Get accurate, detailed construction cost estimations for residential, commercial & industrial projects. Trusted by 1000+ contractors with 98% accuracy.',
+    description: 'Get accurate, detailed construction cost estimations for residential, commercial & industrial projects. Trusted by 1,000+ contractors with 98% accuracy.',
     inLanguage: 'en-US',
-    datePublished: '2015-01-01',
-    dateModified: '2026-04-26',
   },
   {
     '@context': 'https://schema.org',
@@ -329,7 +328,7 @@ const jsonLd = [
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${barlow.variable}`}>
       <head>
         {jsonLd.map((schema, i) => (
           <script
@@ -339,15 +338,15 @@ export default function RootLayout({ children }) {
           />
         ))}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#D4A843" />
-        <meta name="msapplication-TileColor" content="#0A1628" />
+        <meta name="theme-color" content="#FBB923" />
+        <meta name="msapplication-TileColor" content="#2C3F65" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="OZ Estimation" />
         <link rel="preconnect" href="https://images.pexels.com" />
         <link rel="dns-prefetch" href="https://images.pexels.com" />
       </head>
-      <body className="antialiased bg-navy text-white font-sans min-h-screen flex flex-col">
+      <body className="antialiased bg-white text-navy font-sans min-h-screen flex flex-col">
         <TopLoader />
         <Header />
         <main className="flex-1">

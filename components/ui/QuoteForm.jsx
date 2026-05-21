@@ -30,7 +30,7 @@ export default function QuoteForm() {
             <label htmlFor="name" className="block text-sm font-medium text-slate-custom mb-2.5">Your Name *</label>
             <input
               id="name" name="name" type="text" required value={formData.name} onChange={handleChange}
-              className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3.5 text-white placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-white/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
+              className="w-full bg-navy/[0.03] border border-navy/15 rounded-xl px-4 py-3.5 text-navy placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-navy/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
               placeholder="John Doe"
             />
           </div>
@@ -38,7 +38,7 @@ export default function QuoteForm() {
             <label htmlFor="email" className="block text-sm font-medium text-slate-custom mb-2.5">Your Email *</label>
             <input
               id="email" name="email" type="email" required value={formData.email} onChange={handleChange}
-              className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3.5 text-white placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-white/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
+              className="w-full bg-navy/[0.03] border border-navy/15 rounded-xl px-4 py-3.5 text-navy placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-navy/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
               placeholder="john@company.com"
             />
           </div>
@@ -48,7 +48,7 @@ export default function QuoteForm() {
             <label htmlFor="phone" className="block text-sm font-medium text-slate-custom mb-2.5">Phone Number *</label>
             <input
               id="phone" name="phone" type="tel" required value={formData.phone} onChange={handleChange}
-              className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3.5 text-white placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-white/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
+              className="w-full bg-navy/[0.03] border border-navy/15 rounded-xl px-4 py-3.5 text-navy placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-navy/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
               placeholder="+1 (555) 000-0000"
             />
           </div>
@@ -56,7 +56,7 @@ export default function QuoteForm() {
             <label htmlFor="subject" className="block text-sm font-medium text-slate-custom mb-2.5">Subject</label>
             <input
               id="subject" name="subject" type="text" value={formData.subject} onChange={handleChange}
-              className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3.5 text-white placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-white/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
+              className="w-full bg-navy/[0.03] border border-navy/15 rounded-xl px-4 py-3.5 text-navy placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-navy/[0.05] outline-none transition-all text-sm md:text-base backdrop-blur-sm"
               placeholder="Project Type"
             />
           </div>
@@ -65,7 +65,7 @@ export default function QuoteForm() {
           <label htmlFor="message" className="block text-sm font-medium text-slate-custom mb-2.5">Message</label>
           <textarea
             id="message" name="message" rows={4} value={formData.message} onChange={handleChange}
-            className="w-full bg-white/[0.03] border border-white/[0.08] rounded-xl px-4 py-3.5 text-white placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-white/[0.05] outline-none transition-all resize-none text-sm md:text-base backdrop-blur-sm"
+            className="w-full bg-navy/[0.03] border border-navy/15 rounded-xl px-4 py-3.5 text-navy placeholder-slate-custom/40 focus:border-gold/50 focus:ring-1 focus:ring-gold/30 focus:bg-navy/[0.05] outline-none transition-all resize-none text-sm md:text-base backdrop-blur-sm"
             placeholder="Tell us about your project..."
           />
         </div>

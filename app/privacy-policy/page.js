@@ -3,21 +3,22 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata = {
   title: 'Privacy Policy — How We Protect Your Data',
-  description: 'Read OZ Estimation\'s privacy policy. Learn how we collect, use, store, and protect your personal information, project plans, and estimation data. GDPR and CCPA compliant.',
+  description: 'OZ Estimation privacy policy. How we collect, use, and protect your personal information, project plans, and estimation data. GDPR & CCPA compliant.',
   keywords: ['OZ Estimation privacy policy', 'data protection', 'construction estimation privacy', 'information security'],
   alternates: { canonical: 'https://ozestimations.com/privacy-policy/' },
   openGraph: {
     title: 'Privacy Policy | OZ Estimation',
     description: 'How OZ Estimation collects, uses, and protects your information.',
-    url: 'https://ozestimations.com/privacy-policy',
+    url: 'https://ozestimations.com/privacy-policy/',
     siteName: 'OZ Estimation',
     type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'OZ Estimation Privacy Policy' }],
   },
   twitter: {
     card: 'summary',
     site: '@ozestimation',
     title: 'Privacy Policy | OZ Estimation',
-    description: 'How we collect, use, and protect your personal information and project data.',
+    description: 'How OZ Estimation collects, uses, and protects your personal information and project data.',
   },
 };
 
@@ -77,15 +78,15 @@ export default function PrivacyPolicyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(privacyJsonLd) }}
       />
       {/* Hero */}
-      <section className="relative py-14 md:py-20 bg-gradient-to-b from-navy-light to-navy">
+      <section className="relative py-16 md:py-24 bg-gradient-to-b from-light-bg to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb />
           <AnimatedSection className="mt-8 max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-white mb-6 leading-[1.05] tracking-tight">
               Privacy <span className="text-gold">Policy</span>
             </h1>
-            <p className="text-slate-custom text-base md:text-lg leading-relaxed">
-              Last updated: January 2025. This policy describes how OZ Estimation collects, uses, and protects your information.
+            <p className="text-white/85 text-base md:text-lg leading-relaxed">
+              Last updated: May 2026. This policy describes how OZ Estimation collects, uses, and protects your information.
             </p>
           </AnimatedSection>
         </div>
@@ -97,7 +98,7 @@ export default function PrivacyPolicyPage() {
           <div className="space-y-10">
             {sections.map((section, i) => (
               <AnimatedSection key={i} delay={i * 0.05}>
-                <h2 className="text-xl md:text-2xl font-bold text-white mb-4">{section.title}</h2>
+                <h2 className="text-xl md:text-2xl font-bold text-navy mb-4">{section.title}</h2>
                 <p className="text-slate-custom leading-relaxed">{section.content}</p>
               </AnimatedSection>
             ))}

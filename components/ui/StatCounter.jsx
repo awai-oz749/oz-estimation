@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useInView, useReducedMotion } from 'framer-motion';
 
-export default function StatCounter({ value, suffix = '', label }) {
+export default function StatCounter({ value, suffix = '', label, dark = false }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
   const shouldReduceMotion = useReducedMotion();
@@ -36,10 +36,10 @@ export default function StatCounter({ value, suffix = '', label }) {
 
   return (
     <div ref={ref} className="text-center p-4 md:p-6">
-      <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-gradient-gold drop-shadow-[0_0_20px_rgba(212,168,67,0.2)]">
+      <div className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold mb-2 text-gradient-gold drop-shadow-[0_0_20px_rgba(251,185,35,0.25)]">
         {count}{suffix}
       </div>
-      <div className="text-slate-custom text-xs md:text-sm font-medium">{label}</div>
+      <div className={`${dark ? 'text-white/80' : 'text-slate-custom'} text-xs md:text-sm font-semibold uppercase tracking-[0.15em]`}>{label}</div>
     </div>
   );
 }

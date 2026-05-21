@@ -13,19 +13,17 @@ export default function SectionHeading({ title, subtitle, centered = true, light
           {badge}
         </div>
       )}
-      <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight tracking-tight ${light ? 'text-navy' : 'text-white'}`}>
+      <h2 className={`font-display text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase mb-4 leading-[1.05] tracking-tight ${light ? 'text-navy' : 'text-navy'}`}>
         {title}
       </h2>
+      <div className={`mb-5 flex ${centered ? 'justify-center' : ''}`}>
+        <span className="heading-bar" />
+      </div>
       {subtitle && (
-        <p className={`text-base md:text-lg max-w-3xl leading-relaxed ${centered ? 'mx-auto' : ''} ${light ? 'text-navy/70' : 'text-slate-custom'}`}>
+        <p className={`text-base md:text-lg max-w-3xl leading-relaxed text-slate-custom ${centered ? 'mx-auto' : ''}`}>
           {subtitle}
         </p>
       )}
-      <div className={`mt-6 flex items-center gap-1 ${centered ? 'justify-center' : ''}`}>
-        <div className="h-[2px] w-8 bg-gold/30 rounded-full" />
-        <div className="h-[2px] w-16 bg-gradient-to-r from-gold to-amber rounded-full" />
-        <div className="h-[2px] w-8 bg-gold/30 rounded-full" />
-      </div>
     </AnimatedSection>
   );
 }

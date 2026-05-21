@@ -10,7 +10,7 @@ import { HiOutlineEnvelope, HiOutlineMapPin, HiOutlineClock } from 'react-icons/
 
 export const metadata = {
   title: 'Get Free Estimation — Upload Plans, Quote in 24-48h',
-  description: 'Upload your blueprints and get a free construction cost estimation in 24-48 hours. Detailed takeoffs, labor analysis & cost breakdowns. 98% accuracy. No obligation.',
+  description: 'Upload blueprints for a free construction cost estimation in 24-48 hours. Detailed takeoffs, labor analysis & cost breakdowns. 98% accuracy.',
   keywords: [
     'free construction estimate', 'get cost estimation', 'construction quote',
     'free bid estimate', 'upload plans for estimate', 'request construction quote',
@@ -79,16 +79,16 @@ export default function GetEstimationPage() {
       <section className="relative min-h-[55vh] md:min-h-[60vh] py-14 md:py-20 flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image src={heroImages.contact} alt="Get estimation" fill className="object-cover object-[center_35%]" sizes="100vw" quality={90} />
-          <div className="absolute inset-0 bg-navy/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/30 to-navy/80" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb />
           <AnimatedSection className="mt-8 max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-white mb-6 leading-[1.05] tracking-tight">
               Get Your <span className="text-gold">Free Estimation</span>
             </h1>
-            <p className="text-slate-custom text-base md:text-lg leading-relaxed">
+            <p className="text-white/85 text-base md:text-lg leading-relaxed">
               Upload your construction plans and receive a detailed, accurate cost estimation within 24-48 hours. No obligation, completely free.
             </p>
           </AnimatedSection>
@@ -102,7 +102,7 @@ export default function GetEstimationPage() {
             {/* Form */}
             <div className="lg:col-span-2">
               <AnimatedSection>
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Request a Quote</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-navy mb-2">Request a Quote</h2>
                 <p className="text-slate-custom mb-8">Fill out the form below and our team will get back to you promptly.</p>
               </AnimatedSection>
               <QuoteForm />

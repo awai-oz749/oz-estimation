@@ -111,17 +111,17 @@ export default async function CategoryPage({ params }) {
       <section className="relative min-h-[60vh] md:min-h-[65vh] py-14 md:py-20 flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image src={serviceImages[category] || serviceImages['general-estimation']} alt={cat.title} fill className="object-cover object-[center_35%]" sizes="100vw" quality={90} />
-          <div className="absolute inset-0 bg-navy/55" />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/30 to-navy/80" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumb />
           <AnimatedSection className="mt-8 max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-white mb-6 leading-[1.05] tracking-tight">
               {cat.title.split(' ').slice(0, -1).join(' ')}{' '}
               <span className="text-gold">{cat.title.split(' ').slice(-1)}</span>
             </h1>
-            <p className="text-slate-custom text-base md:text-lg leading-relaxed">{cat.description}</p>
+            <p className="text-white/85 text-base md:text-lg leading-relaxed">{cat.description}</p>
           </AnimatedSection>
         </div>
       </section>
@@ -131,15 +131,15 @@ export default async function CategoryPage({ params }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <AnimatedSection>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Overview</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">Overview</h2>
               <p className="text-slate-custom leading-relaxed mb-6">{cat.longDescription}</p>
               <p className="text-slate-custom leading-relaxed">
                 Our team of expert estimators uses industry-leading software and methodologies to deliver accurate, detailed takeoffs that help you bid with confidence and complete projects on budget.
               </p>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <div className="bg-navy-light border border-white/5 rounded-2xl p-6 md:p-8">
-                <h3 className="text-white font-bold text-xl mb-6">What We Cover</h3>
+              <div className="bg-white border border-navy/10 shadow-sm rounded-md p-6 md:p-8">
+                <h3 className="text-navy font-bold text-xl mb-6">What We Cover</h3>
                 <ul className="space-y-3">
                   {cat.features.map((f, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -155,7 +155,7 @@ export default async function CategoryPage({ params }) {
       </section>
 
       {/* Sub-services */}
-      <section className="py-10 md:py-16 bg-navy-light/50">
+      <section className="py-10 md:py-16 bg-light-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             title="Our Services"

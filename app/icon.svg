@@ -1,9 +1,16 @@
 <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="60" height="60" rx="14" fill="#D4A843"/>
-  <path d="M15 44V22L22 18V44" stroke="#0A1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-  <path d="M22 44V16L30 12V44" stroke="#0A1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-  <path d="M30 44V16L38 18V44" stroke="#0A1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-  <path d="M38 44V22L45 26V44" stroke="#0A1628" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-  <text x="30" y="37" text-anchor="middle" fill="#0A1628" font-family="system-ui,sans-serif" font-weight="800" font-size="24" letter-spacing="-1">OZ</text>
-  <path d="M30 6L38 14H22L30 6Z" fill="#0A1628" opacity="0.15"/>
+  <defs>
+    <linearGradient id="icon-grad" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E0A010"/>
+      <stop offset="50%" stop-color="#FBB923"/>
+      <stop offset="100%" stop-color="#FDD05E"/>
+    </linearGradient>
+  </defs>
+  <rect width="60" height="60" rx="14" fill="url(#icon-grad)"/>
+  <path d="M15 44V22L22 18V44" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <path d="M22 44V16L30 12V44" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <path d="M30 44V16L38 18V44" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <path d="M38 44V22L45 26V44" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+  <text x="30" y="37" text-anchor="middle" fill="#FFFFFF" font-family="system-ui,sans-serif" font-weight="800" font-size="24" letter-spacing="-1">OZ</text>
+  <path d="M30 6L38 14H22L30 6Z" fill="#FFFFFF" opacity="0.15"/>
 </svg>

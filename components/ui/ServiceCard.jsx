@@ -9,10 +9,7 @@ export default function ServiceCard({ title, description, href, image, index = 0
   const shouldReduceMotion = useReducedMotion();
 
   const card = (
-    <div className="group relative glass-card rounded-2xl overflow-hidden transition-all duration-500 h-full flex flex-col hover:translate-y-[-4px]">
-      {/* Gradient border glow on hover */}
-      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(212,168,67,0.15) 0%, transparent 50%, rgba(212,168,67,0.1) 100%)' }} />
-      
+    <div className="group relative edge-card overflow-hidden h-full flex flex-col hover:translate-y-[-3px]">
       {image && (
         <div className="relative w-full h-52 sm:h-56 md:h-60 overflow-hidden">
           <Image
@@ -23,20 +20,20 @@ export default function ServiceCard({ title, description, href, image, index = 0
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             quality={85}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-light via-navy-light/50 to-transparent" />
-          {/* Gold accent line at bottom of image */}
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-gold/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
+          {/* Gold accent bar at bottom of image */}
+          <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gold group-hover:w-full transition-all duration-500 ease-out" />
         </div>
       )}
-      <div className="relative p-5 sm:p-6 md:p-7 flex flex-col flex-grow">
-        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 sm:mb-3 group-hover:text-gradient-gold transition-all duration-300">
+      <div className="relative p-5 sm:p-6 flex flex-col flex-grow">
+        <h3 className="font-display text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-tight text-navy mb-2 group-hover:text-amber transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-slate-custom text-xs sm:text-sm md:text-base leading-relaxed flex-grow mb-3 sm:mb-4">
+        <p className="text-slate-custom text-xs sm:text-sm leading-relaxed flex-grow mb-4">
           {description}
         </p>
-        <div className="flex items-center gap-2 text-gold text-xs sm:text-sm font-semibold group-hover:gap-4 transition-all duration-300">
-          Learn More <HiArrowRight className="w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+        <div className="flex items-center gap-2 text-amber text-xs sm:text-sm font-bold uppercase tracking-wider group-hover:gap-4 transition-all duration-300">
+          Learn More <HiArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
         </div>
       </div>
     </div>

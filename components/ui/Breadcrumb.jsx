@@ -19,9 +19,9 @@ export default function Breadcrumb() {
 
   return (
     <>
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-custom/80 flex-wrap">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-white/85 flex-wrap">
         <Link href="/" className="hover:text-gold transition-colors flex items-center gap-1.5 font-medium">
-          <HiHomeModern className="w-4 h-4 text-gold/60" /> Home
+          <HiHomeModern className="w-4 h-4 text-gold" /> Home
         </Link>
         {crumbs.map((crumb, i) => (
           <span key={crumb.href} className="flex items-center gap-2">
