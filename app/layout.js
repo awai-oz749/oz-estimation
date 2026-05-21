@@ -91,8 +91,7 @@ export const metadata = {
     },
   },
   verification: {
-    // Replace with real values when available
-    // google: 'your-google-verification-code',
+    google: 'LXq2geL3QM2wL1q7OtzvzJsH8WSSS4KuFgc80IV_RK8',
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
   },
