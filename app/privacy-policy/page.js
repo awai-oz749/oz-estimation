@@ -1,6 +1,7 @@
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
+
 export const metadata = {
   title: 'Privacy Policy — How We Protect Your Data',
   description: 'OZ Estimation privacy policy. How we collect, use, and protect your personal information, project plans, and estimation data. GDPR & CCPA compliant.',
