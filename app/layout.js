@@ -104,11 +104,21 @@ export const metadata = {
     'ICBM': '34.0407, -118.2622',
     'rating': 'General',
     'distribution': 'Global',
-    'revisit-after': '3 days',
     'og:locality': 'Los Angeles',
     'og:region': 'CA',
     'og:country-name': 'USA',
   },
+};
+
+export const viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#1A2540' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  colorScheme: 'light',
 };
 
 const jsonLd = [
@@ -294,6 +304,14 @@ const jsonLd = [
     description: 'Professional construction cost estimation services for residential, commercial, and industrial projects across the USA.',
     publisher: { '@id': 'https://ozestimations.com/#organization' },
     inLanguage: 'en-US',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://ozestimations.com/services/?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
   },
   {
     '@context': 'https://schema.org',
@@ -343,6 +361,8 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="OZ Estimation" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.pexels.com" />
         <link rel="dns-prefetch" href="https://images.pexels.com" />
       </head>

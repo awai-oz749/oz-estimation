@@ -60,7 +60,6 @@ const config = {
       loc: path,
       changefreq,
       priority,
-      lastmod: new Date().toISOString(),
     };
   },
 };

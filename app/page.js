@@ -41,6 +41,41 @@ export const metadata = {
   },
 };
 
+const homeJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://ozestimations.com/#homepage',
+    url: 'https://ozestimations.com/',
+    name: 'OZ Estimation | Construction Cost Estimation USA',
+    description: 'Accurate construction cost estimation for residential, commercial & industrial projects across the USA.',
+    isPartOf: { '@id': 'https://ozestimations.com/#website' },
+    about: { '@id': 'https://ozestimations.com/#organization' },
+    primaryImageOfPage: { '@type': 'ImageObject', url: 'https://ozestimations.com/og-image.png' },
+    inLanguage: 'en-US',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', '.hero-subtitle'],
+    },
+    breadcrumb: { '@id': 'https://ozestimations.com/#breadcrumb' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    '@id': 'https://ozestimations.com/#breadcrumb',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com/' },
+    ],
+  },
+];
+
 export default function HomePage() {
-  return <HomeContent />;
+  return (
+    <>
+      {homeJsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
+      <HomeContent />
+    </>
+  );
 }

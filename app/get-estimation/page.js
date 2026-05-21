@@ -67,6 +67,39 @@ const estimationJsonLd = [
       { '@type': 'ListItem', position: 2, name: 'Get Free Estimation', item: 'https://ozestimations.com/get-estimation' },
     ],
   },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Get a Free Construction Cost Estimation',
+    description: 'Three simple steps to receive a detailed construction cost estimate within 24-48 hours.',
+    totalTime: 'PT48H',
+    estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+    supply: [{ '@type': 'HowToSupply', name: 'Construction blueprints or project plans (PDF, DWG, RVT)' }],
+    tool: [{ '@type': 'HowToTool', name: 'OZ Estimation online quote form' }],
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Upload your plans',
+        text: 'Submit your construction blueprints, drawings or project specifications through our secure online form.',
+        url: 'https://ozestimations.com/get-estimation/#step-1',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Receive your estimate',
+        text: 'Our ASPE-certified estimators prepare a detailed quantity takeoff and cost breakdown within 24-48 hours.',
+        url: 'https://ozestimations.com/get-estimation/#step-2',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Win your bid',
+        text: 'Use our accurate, bid-ready estimate to confidently submit competitive proposals and win more projects.',
+        url: 'https://ozestimations.com/get-estimation/#step-3',
+      },
+    ],
+  },
 ];
 
 export default function GetEstimationPage() {

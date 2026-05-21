@@ -4,8 +4,10 @@
   "description": "Professional Construction Cost Estimation Services — Accurate Takeoffs & Cost Breakdowns in 24-48 Hours",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2C3F65",
+  "background_color": "#FFFFFF",
   "theme_color": "#FBB923",
+  "scope": "/",
+  "orientation": "portrait",
   "categories": ["business", "construction", "productivity"],
   "lang": "en-US",
   "icons": [
