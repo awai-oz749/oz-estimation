@@ -43,11 +43,11 @@ export async function generateMetadata({ params }) {
       'cost breakdown',
       'bid support',
     ],
-    alternates: { canonical: `https://ozestimations.com/services/${category}/${service}/` },
+    alternates: { canonical: `https://ozestimation.com/services/${category}/${service}/` },
     openGraph: {
       title: `${s.title} | OZ Estimation`,
       description: `Professional ${s.title.toLowerCase()}. ASPE-certified. Free quotes in 24-48 hours.`,
-      url: `https://ozestimations.com/services/${category}/${service}/`,
+      url: `https://ozestimation.com/services/${category}/${service}/`,
       siteName: 'OZ Estimation',
       type: 'website',
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${s.title} Services` }],
@@ -75,14 +75,14 @@ export default async function ServicePage({ params }) {
     '@type': 'Service',
     name: s.title,
     description: s.description,
-    url: `https://ozestimations.com/services/${category}/${service}`,
-    image: 'https://ozestimations.com/og-image.png',
+    url: `https://ozestimation.com/services/${category}/${service}`,
+    image: 'https://ozestimation.com/og-image.png',
     category: cat.title,
     serviceType: s.title,
     provider: {
       '@type': 'Organization',
       name: 'OZ Estimation',
-      url: 'https://ozestimations.com',
+      url: 'https://ozestimation.com',
     },
     areaServed: { '@type': 'Country', name: 'United States' },
     offers: {
@@ -97,10 +97,10 @@ export default async function ServicePage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ozestimations.com/services' },
-      { '@type': 'ListItem', position: 3, name: cat.title, item: `https://ozestimations.com/services/${category}` },
-      { '@type': 'ListItem', position: 4, name: s.title, item: `https://ozestimations.com/services/${category}/${service}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ozestimation.com/services' },
+      { '@type': 'ListItem', position: 3, name: cat.title, item: `https://ozestimation.com/services/${category}` },
+      { '@type': 'ListItem', position: 4, name: s.title, item: `https://ozestimation.com/services/${category}/${service}` },
     ],
   };
 

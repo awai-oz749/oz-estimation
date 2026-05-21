@@ -76,7 +76,7 @@ const svg = `
   <rect x="0" y="${height - 4}" width="${width}" height="4" fill="url(#accent)" />
   
   <!-- Website URL -->
-  <text x="${width - 60}" y="${height - 30}" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#8FA0BC" text-anchor="end">ozestimations.com</text>
+  <text x="${width - 60}" y="${height - 30}" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#8FA0BC" text-anchor="end">ozestimation.com</text>
   
   <!-- Right decorative element -->
   <g opacity="0.1">

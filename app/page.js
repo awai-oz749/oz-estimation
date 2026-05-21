@@ -14,12 +14,12 @@ export const metadata = {
     'drywall estimation', 'concrete estimation', 'electrical estimation cost',
   ],
   alternates: {
-    canonical: 'https://ozestimations.com/',
+    canonical: 'https://ozestimation.com/',
   },
   openGraph: {
     title: 'OZ Estimation | Construction Cost Estimation Services',
     description: 'Accurate construction cost estimation for all project types. 5,000+ projects, 98% accuracy, ASPE-certified.',
-    url: 'https://ozestimations.com/',
+    url: 'https://ozestimation.com/',
     siteName: 'OZ Estimation',
     type: 'website',
     images: [
@@ -45,26 +45,26 @@ const homeJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': 'https://ozestimations.com/#homepage',
-    url: 'https://ozestimations.com/',
+    '@id': 'https://ozestimation.com/#homepage',
+    url: 'https://ozestimation.com/',
     name: 'OZ Estimation | Construction Cost Estimation USA',
     description: 'Accurate construction cost estimation for residential, commercial & industrial projects across the USA.',
-    isPartOf: { '@id': 'https://ozestimations.com/#website' },
-    about: { '@id': 'https://ozestimations.com/#organization' },
-    primaryImageOfPage: { '@type': 'ImageObject', url: 'https://ozestimations.com/og-image.png' },
+    isPartOf: { '@id': 'https://ozestimation.com/#website' },
+    about: { '@id': 'https://ozestimation.com/#organization' },
+    primaryImageOfPage: { '@type': 'ImageObject', url: 'https://ozestimation.com/og-image.png' },
     inLanguage: 'en-US',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', 'h2', '.hero-subtitle'],
     },
-    breadcrumb: { '@id': 'https://ozestimations.com/#breadcrumb' },
+    breadcrumb: { '@id': 'https://ozestimation.com/#breadcrumb' },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    '@id': 'https://ozestimations.com/#breadcrumb',
+    '@id': 'https://ozestimation.com/#breadcrumb',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com/' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com/' },
     ],
   },
 ];

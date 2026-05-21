@@ -6,11 +6,11 @@ export const metadata = {
   title: 'Privacy Policy — How We Protect Your Data',
   description: 'OZ Estimation privacy policy. How we collect, use, and protect your personal information, project plans, and estimation data. GDPR & CCPA compliant.',
   keywords: ['OZ Estimation privacy policy', 'data protection', 'construction estimation privacy', 'information security'],
-  alternates: { canonical: 'https://ozestimations.com/privacy-policy/' },
+  alternates: { canonical: 'https://ozestimation.com/privacy-policy/' },
   openGraph: {
     title: 'Privacy Policy | OZ Estimation',
     description: 'How OZ Estimation collects, uses, and protects your information.',
-    url: 'https://ozestimations.com/privacy-policy/',
+    url: 'https://ozestimation.com/privacy-policy/',
     siteName: 'OZ Estimation',
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'OZ Estimation Privacy Policy' }],
@@ -27,8 +27,8 @@ const privacyJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
-    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://ozestimations.com/privacy-policy' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com' },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://ozestimation.com/privacy-policy' },
   ],
 };
 
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
     },
     {
       title: 'Contact Us',
-      content: 'If you have questions about this privacy policy or our data practices, please contact us at info@ozestimations.com. You can also write to us at 425 W 11th St, 2nd Floor, Los Angeles, CA 90015.',
+      content: 'If you have questions about this privacy policy or our data practices, please contact us at info@ozestimation.com. You can also write to us at 425 W 11th St, 2nd Floor, Los Angeles, CA 90015.',
     },
   ];
 

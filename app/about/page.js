@@ -19,11 +19,11 @@ export const metadata = {
     'construction cost consultants', 'estimation company USA', 'experienced estimators',
     'construction bidding experts', 'quantity surveyors USA', 'certified cost estimators',
   ],
-  alternates: { canonical: 'https://ozestimations.com/about/' },
+  alternates: { canonical: 'https://ozestimation.com/about/' },
   openGraph: {
     title: 'About OZ Estimation | ASPE-Certified Estimators',
     description: '10+ years experience. 5,000+ projects. 98% accuracy. ASPE-certified team serving all 50 US states.',
-    url: 'https://ozestimations.com/about/',
+    url: 'https://ozestimation.com/about/',
     siteName: 'OZ Estimation',
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About OZ Estimation' }],
@@ -43,15 +43,15 @@ const aboutJsonLd = [
     '@type': 'AboutPage',
     name: 'About OZ Estimation',
     description: 'Learn about OZ Estimation — ASPE-certified construction cost estimators with 10+ years of experience.',
-    url: 'https://ozestimations.com/about',
-    mainEntity: { '@id': 'https://ozestimations.com/#organization' },
+    url: 'https://ozestimation.com/about',
+    mainEntity: { '@id': 'https://ozestimation.com/#organization' },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimations.com' },
-      { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://ozestimations.com/about' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com' },
+      { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://ozestimation.com/about' },
     ],
   },
 ];
