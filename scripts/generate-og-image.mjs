@@ -39,7 +39,7 @@ const svg = `
   <rect x="60" y="60" width="3" height="50" fill="#FBB923" rx="1.5" />
   
   <!-- Company name -->
-  <text x="60" y="160" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="6" fill="#FBB923">OZ ESTIMATION</text>
+  <text x="60" y="160" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="6" fill="#FBB923">BRIX ESTIMATION</text>
   
   <!-- Main title -->
   <text x="60" y="260" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">Construction Cost</text>
@@ -76,7 +76,7 @@ const svg = `
   <rect x="0" y="${height - 4}" width="${width}" height="4" fill="url(#accent)" />
   
   <!-- Website URL -->
-  <text x="${width - 60}" y="${height - 30}" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#8FA0BC" text-anchor="end">ozestimation.com</text>
+  <text x="${width - 60}" y="${height - 30}" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#8FA0BC" text-anchor="end">brixestimation.com</text>
   
   <!-- Right decorative element -->
   <g opacity="0.1">

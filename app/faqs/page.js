@@ -17,19 +17,19 @@ export const metadata = {
     'estimation process explained', 'construction takeoff FAQ', 'free estimate questions',
     'quantity takeoff process', 'material takeoff FAQ', 'cost estimation methodology',
   ],
-  alternates: { canonical: 'https://ozestimation.com/faqs/' },
+  alternates: { canonical: 'https://brixestimation.com/faqs/' },
   openGraph: {
-    title: 'Construction Estimation FAQ | OZ Estimation',
+    title: 'Construction Estimation FAQ | Brix Estimation',
     description: 'Pricing, turnaround, accuracy, and process — everything you need to know about our estimation services.',
-    url: 'https://ozestimation.com/faqs/',
-    siteName: 'OZ Estimation',
+    url: 'https://brixestimation.com/faqs/',
+    siteName: 'Brix Estimation',
     type: 'website',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Construction Estimation FAQ' }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@ozestimation',
-    title: 'Estimation FAQ | OZ Estimation',
+    site: '@brixestimation',
+    title: 'Estimation FAQ | Brix Estimation',
     description: '24-48 hour turnaround. 98% accuracy. All trades covered.',
     images: ['/og-image.png'],
   },
@@ -38,7 +38,7 @@ export const metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  url: 'https://ozestimation.com/faqs',
+  url: 'https://brixestimation.com/faqs',
   name: 'Construction Estimation FAQ',
   description: 'Frequently asked questions about construction cost estimation services, pricing, process, and turnaround time.',
   mainEntity: generalFaqs.map(faq => ({
@@ -55,8 +55,8 @@ const breadcrumbJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com' },
-    { '@type': 'ListItem', position: 2, name: 'FAQs', item: 'https://ozestimation.com/faqs' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brixestimation.com' },
+    { '@type': 'ListItem', position: 2, name: 'FAQs', item: 'https://brixestimation.com/faqs' },
   ],
 };
 

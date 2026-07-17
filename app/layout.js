@@ -19,10 +19,10 @@ const barlow = Barlow_Condensed({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://ozestimation.com'),
+  metadataBase: new URL('https://brixestimation.com'),
   title: {
-    default: 'OZ Estimation | Construction Cost Estimation USA',
-    template: '%s | OZ Estimation',
+    default: 'Brix Estimation | Construction Cost Estimation USA',
+    template: '%s | Brix Estimation',
   },
   description: 'Accurate construction cost estimation for residential, commercial & industrial projects across all 50 US states. ASPE-certified. Free quotes in 24-48 hours.',
   keywords: [
@@ -42,22 +42,22 @@ export const metadata = {
     'general contractor estimation', 'subcontractor bid support', 'construction cost analysis',
     'ASPE certified estimator', 'RSMeans pricing', 'ZIP code based pricing',
   ],
-  authors: [{ name: 'OZ Estimation', url: 'https://ozestimation.com' }],
-  creator: 'OZ Estimation',
-  publisher: 'OZ Estimation',
+  authors: [{ name: 'Brix Estimation', url: 'https://brixestimation.com' }],
+  creator: 'Brix Estimation',
+  publisher: 'Brix Estimation',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   alternates: {
-    canonical: 'https://ozestimation.com/',
+    canonical: 'https://brixestimation.com/',
   },
   openGraph: {
-    title: 'OZ Estimation | Construction Cost Estimation Services',
+    title: 'Brix Estimation | Construction Cost Estimation Services',
     description: 'Accurate construction cost estimation for all project types. 5,000+ projects. 98% accuracy. ASPE-certified. Free quotes in 24-48 hours.',
-    url: 'https://ozestimation.com/',
-    siteName: 'OZ Estimation',
+    url: 'https://brixestimation.com/',
+    siteName: 'Brix Estimation',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -65,16 +65,16 @@ export const metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'OZ Estimation - Construction Cost Estimation Services in USA',
+        alt: 'Brix Estimation - Construction Cost Estimation Services in USA',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@ozestimation',
-    creator: '@ozestimation',
-    title: 'OZ Estimation | Construction Cost Estimation USA',
+    site: '@brixestimation',
+    creator: '@brixestimation',
+    title: 'Brix Estimation | Construction Cost Estimation USA',
     description: '5,000+ projects. 98% accuracy. ASPE-certified estimators. Free quotes in 24-48 hours across all 50 states.',
     images: ['/og-image.png'],
   },
@@ -124,18 +124,18 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': ['Organization', 'ProfessionalService'],
-    '@id': 'https://ozestimation.com/#organization',
-    name: 'OZ Estimation',
-    legalName: 'OZ Estimation LLC',
-    url: 'https://ozestimation.com',
+    '@id': 'https://brixestimation.com/#organization',
+    name: 'Brix Estimation',
+    legalName: 'Brix Estimation LLC',
+    url: 'https://brixestimation.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://ozestimation.com/icon.svg',
+      url: 'https://brixestimation.com/logo.png',
       width: 60,
       height: 60,
     },
-    image: 'https://ozestimation.com/og-image.png',
-    description: 'OZ Estimation is America\'s leading construction cost estimation company delivering accurate material takeoffs, quantity surveys, and detailed cost breakdowns for residential, commercial, and industrial projects across all 50 US states.',
+    image: 'https://brixestimation.com/og-image.png',
+    description: 'Brix Estimation is America\'s leading construction cost estimation company delivering accurate material takeoffs, quantity surveys, and detailed cost breakdowns for residential, commercial, and industrial projects across all 50 US states.',
     foundingDate: '2015',
     numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 10, maxValue: 50 },
     areaServed: [
@@ -172,7 +172,7 @@ const jsonLd = [
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        email: 'info@ozestimation.com',
+        email: 'info@brixestimation.com',
         contactType: 'customer service',
         areaServed: 'US',
         availableLanguage: 'English',
@@ -230,11 +230,11 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    '@id': 'https://ozestimation.com/#localbusiness',
-    name: 'OZ Estimation',
-    image: 'https://ozestimation.com/og-image.png',
-    url: 'https://ozestimation.com',
-    email: 'info@ozestimation.com',
+    '@id': 'https://brixestimation.com/#localbusiness',
+    name: 'Brix Estimation',
+    image: 'https://brixestimation.com/og-image.png',
+    url: 'https://brixestimation.com',
+    email: 'info@brixestimation.com',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
@@ -275,7 +275,7 @@ const jsonLd = [
         '@type': 'Review',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         author: { '@type': 'Person', name: 'Robert Johnson' },
-        reviewBody: 'OZ Estimation helped us win 40% more bids with their accurate and detailed cost breakdowns. Highly recommended!',
+        reviewBody: 'Brix Estimation helped us win 40% more bids with their accurate and detailed cost breakdowns. Highly recommended!',
       },
       {
         '@type': 'Review',
@@ -287,24 +287,24 @@ const jsonLd = [
         '@type': 'Review',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
         author: { '@type': 'Person', name: 'Michael Chen' },
-        reviewBody: 'We\'ve been using OZ Estimation for 3 years. Their structural trade estimates are always spot-on and delivered on time.',
+        reviewBody: 'We\'ve been using Brix Estimation for 3 years. Their structural trade estimates are always spot-on and delivered on time.',
       },
     ],
   },
   {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://ozestimation.com/#website',
-    url: 'https://ozestimation.com',
-    name: 'OZ Estimation',
+    '@id': 'https://brixestimation.com/#website',
+    url: 'https://brixestimation.com',
+    name: 'Brix Estimation',
     description: 'Professional construction cost estimation services for residential, commercial, and industrial projects across the USA.',
-    publisher: { '@id': 'https://ozestimation.com/#organization' },
+    publisher: { '@id': 'https://brixestimation.com/#organization' },
     inLanguage: 'en-US',
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://ozestimation.com/services/?q={search_term_string}',
+        urlTemplate: 'https://brixestimation.com/services/?q={search_term_string}',
       },
       'query-input': 'required name=search_term_string',
     },
@@ -312,30 +312,30 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': 'https://ozestimation.com/#webpage',
-    url: 'https://ozestimation.com',
-    name: 'OZ Estimation | #1 Construction Cost Estimation Services in USA',
-    isPartOf: { '@id': 'https://ozestimation.com/#website' },
-    about: { '@id': 'https://ozestimation.com/#organization' },
+    '@id': 'https://brixestimation.com/#webpage',
+    url: 'https://brixestimation.com',
+    name: 'Brix Estimation | #1 Construction Cost Estimation Services in USA',
+    isPartOf: { '@id': 'https://brixestimation.com/#website' },
+    about: { '@id': 'https://brixestimation.com/#organization' },
     description: 'Get accurate, detailed construction cost estimations for residential, commercial & industrial projects. Trusted by 1,000+ contractors with 98% accuracy.',
     inLanguage: 'en-US',
   },
   {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    '@id': 'https://ozestimation.com/#servicelist',
+    '@id': 'https://brixestimation.com/#servicelist',
     name: 'Construction Estimation Services',
-    description: 'Complete list of professional construction cost estimation services offered by OZ Estimation.',
+    description: 'Complete list of professional construction cost estimation services offered by Brix Estimation.',
     numberOfItems: 8,
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'General Estimation', url: 'https://ozestimation.com/services/general-estimation' },
-      { '@type': 'ListItem', position: 2, name: 'Sitework & Demolition', url: 'https://ozestimation.com/services/sitework-demolition' },
-      { '@type': 'ListItem', position: 3, name: 'MEP Systems', url: 'https://ozestimation.com/services/mep' },
-      { '@type': 'ListItem', position: 4, name: 'Structural Trades', url: 'https://ozestimation.com/services/structural-trade' },
-      { '@type': 'ListItem', position: 5, name: 'Building Envelope', url: 'https://ozestimation.com/services/building-envelope' },
-      { '@type': 'ListItem', position: 6, name: 'Interior Finishes', url: 'https://ozestimation.com/services/interior-finishes' },
-      { '@type': 'ListItem', position: 7, name: 'Specialty & Landscaping', url: 'https://ozestimation.com/services/specialty-landscaping' },
-      { '@type': 'ListItem', position: 8, name: '3D Rendering', url: 'https://ozestimation.com/services/3d-rendering' },
+      { '@type': 'ListItem', position: 1, name: 'General Estimation', url: 'https://brixestimation.com/services/general-estimation' },
+      { '@type': 'ListItem', position: 2, name: 'Sitework & Demolition', url: 'https://brixestimation.com/services/sitework-demolition' },
+      { '@type': 'ListItem', position: 3, name: 'MEP Systems', url: 'https://brixestimation.com/services/mep' },
+      { '@type': 'ListItem', position: 4, name: 'Structural Trades', url: 'https://brixestimation.com/services/structural-trade' },
+      { '@type': 'ListItem', position: 5, name: 'Building Envelope', url: 'https://brixestimation.com/services/building-envelope' },
+      { '@type': 'ListItem', position: 6, name: 'Interior Finishes', url: 'https://brixestimation.com/services/interior-finishes' },
+      { '@type': 'ListItem', position: 7, name: 'Specialty & Landscaping', url: 'https://brixestimation.com/services/specialty-landscaping' },
+      { '@type': 'ListItem', position: 8, name: '3D Rendering', url: 'https://brixestimation.com/services/3d-rendering' },
     ],
   },
 ];
@@ -356,7 +356,7 @@ export default function RootLayout({ children }) {
         <meta name="msapplication-TileColor" content="#2C3F65" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="OZ Estimation" />
+        <meta name="apple-mobile-web-app-title" content="Brix Estimation" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://images.pexels.com" />

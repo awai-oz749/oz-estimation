@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: 'https://ozestimation.com',
+  siteUrl: 'https://brixestimation.com',
   generateRobotsTxt: true,
   outDir: './out',
   changefreq: 'weekly',

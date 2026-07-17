@@ -8,10 +8,10 @@
   
   <!-- Logo icon -->
   <rect x="430" y="140" width="70" height="70" rx="16" fill="url(#logo-grad)"/>
-  <text x="465" y="186" text-anchor="middle" fill="#0A1628" font-family="system-ui,sans-serif" font-weight="800" font-size="30">OZ</text>
+  <text x="465" y="186" text-anchor="middle" fill="#0A1628" font-family="system-ui,sans-serif" font-weight="800" font-size="26">BX</text>
   
   <!-- Company name -->
-  <text x="515" y="170" fill="#FFFFFF" font-family="system-ui,sans-serif" font-weight="800" font-size="42" letter-spacing="-1">OZ Estimation</text>
+  <text x="515" y="170" fill="#FFFFFF" font-family="system-ui,sans-serif" font-weight="800" font-size="42" letter-spacing="-1">Brix Estimation</text>
   <text x="515" y="195" fill="#D4A843" font-family="system-ui,sans-serif" font-weight="600" font-size="14" letter-spacing="4">COST ESTIMATION EXPERTS</text>
   
   <!-- Tagline -->
@@ -32,7 +32,7 @@
   <text x="920" y="458" text-anchor="middle" fill="#94A3B8" font-family="system-ui,sans-serif" font-weight="400" font-size="14">Turnaround</text>
   
   <!-- Bottom domain -->
-  <text x="600" y="570" text-anchor="middle" fill="#94A3B8" font-family="system-ui,sans-serif" font-weight="400" font-size="16">ozestimations.com</text>
+  <text x="600" y="570" text-anchor="middle" fill="#94A3B8" font-family="system-ui,sans-serif" font-weight="400" font-size="16">brixestimation.com</text>
   
   <!-- Bottom gold line -->
   <rect y="624" width="1200" height="6" fill="url(#gold-line)"/>

@@ -1,15 +1,15 @@
 export const generalFaqs = [
   {
     q: "What's your typical turnaround time for estimates?",
-    a: "Most projects are completed within 24-48 hours depending on scope and complexity. OZ Estimation prioritizes accuracy over speed but understands the deadline pressures contractors face daily."
+    a: "Most projects are completed within 24-48 hours depending on scope and complexity. Brix Estimation prioritizes accuracy over speed but understands the deadline pressures contractors face daily."
   },
   {
     q: "Do you provide estimates for all construction trades?",
-    a: "Yes. OZ Estimation covers all CSI divisions and trades of construction including Civil, Structural, Drywall, Framing, Mechanical, Electrical, Plumbing, Roofing, Flooring, Structural & Misc. Steel, Thermal and moisture protection, Fire suppression, Sitework and Lumber takeoffs."
+    a: "Yes. Brix Estimation covers all CSI divisions and trades of construction including Civil, Structural, Drywall, Framing, Mechanical, Electrical, Plumbing, Roofing, Flooring, Structural & Misc. Steel, Thermal and moisture protection, Fire suppression, Sitework and Lumber takeoffs."
   },
   {
     q: "What if I don't have project plans?",
-    a: "OZ Estimation can work with sketches, photos, measurements, or preliminary drawings. Complete documentation ensures the most accurate estimates, but the team adapts to what you have available."
+    a: "Brix Estimation can work with sketches, photos, measurements, or preliminary drawings. Complete documentation ensures the most accurate estimates, but the team adapts to what you have available."
   },
   {
     q: "What information do you need to start an estimate?",
@@ -17,7 +17,7 @@ export const generalFaqs = [
   },
   {
     q: "Can you handle rush projects?",
-    a: "Absolutely. OZ Estimation offers expedited services for urgent bid deadlines. Contact us to discuss your timeline requirements and the team will accommodate whenever possible."
+    a: "Absolutely. Brix Estimation offers expedited services for urgent bid deadlines. Contact us to discuss your timeline requirements and the team will accommodate whenever possible."
   },
   {
     q: "How much accurate are you in your estimation?",
@@ -25,7 +25,7 @@ export const generalFaqs = [
   },
   {
     q: "How do we price out the projects?",
-    a: "OZ Estimation uses ZIP code-specific pricing databases reflecting current material costs and labor rates in your exact location, combined with ASPE-standard methodology."
+    a: "Brix Estimation uses ZIP code-specific pricing databases reflecting current material costs and labor rates in your exact location, combined with ASPE-standard methodology."
   },
   {
     q: "Would you ever provide the same estimate to other clients?",

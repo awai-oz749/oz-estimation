@@ -129,7 +129,7 @@ function HeroSection() {
             transition={{ duration: 0.5, delay: 0.7 }}
             className="text-white/85 text-sm md:text-base lg:text-lg max-w-2xl mb-6 leading-relaxed font-light"
           >
-            OZ Estimation delivers precise, detailed cost estimations for residential, commercial, and industrial construction projects. Win more bids with confidence.
+            Brix Estimation delivers precise, detailed cost estimations for residential, commercial, and industrial construction projects. Win more bids with confidence.
           </motion.p>
 
           <motion.div
@@ -195,7 +195,7 @@ function SoftwareScroller() {
             Industry Standard
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-navy mb-3 tracking-tight">Software & Tools</h2>
-          <p className="text-slate-custom max-w-xl mx-auto text-sm md:text-base">OZ Estimation leverages the best construction estimation software for precise results.</p>
+          <p className="text-slate-custom max-w-xl mx-auto text-sm md:text-base">Brix Estimation leverages the best construction estimation software for precise results.</p>
         </AnimatedSection>
       </div>
       <div className="relative overflow-hidden">
@@ -283,9 +283,9 @@ function ServicesSection() {
 
 function TestimonialsSection() {
   const testimonials = [
-    { name: 'Robert Johnson', role: 'General Contractor', text: 'OZ Estimation helped us win 40% more bids with their accurate and detailed cost breakdowns. Highly recommended!', img: testimonialImages[0] },
+    { name: 'Robert Johnson', role: 'General Contractor', text: 'Brix Estimation helped us win 40% more bids with their accurate and detailed cost breakdowns. Highly recommended!', img: testimonialImages[0] },
     { name: 'Sarah Williams', role: 'Project Manager', text: 'Their MEP estimation services are second to none. The turnaround time and accuracy have been consistently exceptional.', img: testimonialImages[1] },
-    { name: 'Michael Chen', role: 'Commercial Developer', text: "We've been using OZ Estimation for 3 years. Their structural trade estimates are always spot-on and delivered on time.", img: testimonialImages[2] },
+    { name: 'Michael Chen', role: 'Commercial Developer', text: "We've been using Brix Estimation for 3 years. Their structural trade estimates are always spot-on and delivered on time.", img: testimonialImages[2] },
   ];
 
   return (

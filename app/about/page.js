@@ -12,26 +12,26 @@ import { HiOutlineBuildingOffice2, HiOutlineUserGroup, HiOutlineTrophy, HiOutlin
 
 export const metadata = {
   title: 'About Us — ASPE-Certified Construction Estimators',
-  description: 'Meet OZ Estimation — ASPE-certified construction cost estimators with 10+ years experience. 5,000+ projects. 98% accuracy across all 50 US states.',
+  description: 'Meet Brix Estimation — ASPE-certified construction cost estimators with 10+ years experience. 5,000+ projects. 98% accuracy across all 50 US states.',
   keywords: [
-    'about OZ Estimation', 'construction estimating company', 'estimating team', 'construction cost experts',
+    'about Brix Estimation', 'construction estimating company', 'estimating team', 'construction cost experts',
     'ASPE certified estimators', 'construction estimation firm', 'professional estimators',
     'construction cost consultants', 'estimation company USA', 'experienced estimators',
     'construction bidding experts', 'quantity surveyors USA', 'certified cost estimators',
   ],
-  alternates: { canonical: 'https://ozestimation.com/about/' },
+  alternates: { canonical: 'https://brixestimation.com/about/' },
   openGraph: {
-    title: 'About OZ Estimation | ASPE-Certified Estimators',
+    title: 'About Brix Estimation | ASPE-Certified Estimators',
     description: '10+ years experience. 5,000+ projects. 98% accuracy. ASPE-certified team serving all 50 US states.',
-    url: 'https://ozestimation.com/about/',
-    siteName: 'OZ Estimation',
+    url: 'https://brixestimation.com/about/',
+    siteName: 'Brix Estimation',
     type: 'website',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About OZ Estimation' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About Brix Estimation' }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@ozestimation',
-    title: 'About OZ Estimation — Expert Estimators',
+    site: '@brixestimation',
+    title: 'About Brix Estimation — Expert Estimators',
     description: 'ASPE-certified. 10+ years. 5,000+ projects. 98% accuracy.',
     images: ['/og-image.png'],
   },
@@ -41,17 +41,17 @@ const aboutJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'About OZ Estimation',
-    description: 'Learn about OZ Estimation — ASPE-certified construction cost estimators with 10+ years of experience.',
-    url: 'https://ozestimation.com/about',
-    mainEntity: { '@id': 'https://ozestimation.com/#organization' },
+    name: 'About Brix Estimation',
+    description: 'Learn about Brix Estimation — ASPE-certified construction cost estimators with 10+ years of experience.',
+    url: 'https://brixestimation.com/about',
+    mainEntity: { '@id': 'https://brixestimation.com/#organization' },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com' },
-      { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://ozestimation.com/about' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brixestimation.com' },
+      { '@type': 'ListItem', position: 2, name: 'About Us', item: 'https://brixestimation.com/about' },
     ],
   },
 ];
@@ -65,7 +65,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative min-h-[55vh] md:min-h-[60vh] py-14 md:py-20 flex items-end overflow-hidden">
         <div className="absolute inset-0">
-          <Image src={heroImages.about} alt="About OZ Estimation" fill className="object-cover object-[center_35%]" sizes="100vw" quality={90} />
+          <Image src={heroImages.about} alt="About Brix Estimation" fill className="object-cover object-[center_35%]" sizes="100vw" quality={90} />
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
         </div>
@@ -73,10 +73,10 @@ export default function AboutPage() {
           <Breadcrumb />
           <AnimatedSection className="mt-8 max-w-3xl">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase text-white mb-6 leading-[1.05] tracking-tight">
-              About <span className="text-gold">OZ Estimation</span>
+              About <span className="text-gold">Brix Estimation</span>
             </h1>
             <p className="text-white/85 text-base md:text-lg leading-relaxed">
-              OZ Estimation is a team of dedicated construction cost estimation professionals committed to helping contractors, developers, and builders win more bids with precise, reliable estimates.
+              Brix Estimation is a team of dedicated construction cost estimation professionals committed to helping contractors, developers, and builders win more bids with precise, reliable estimates.
             </p>
           </AnimatedSection>
         </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
               <p className="text-slate-custom leading-relaxed mb-4">
-                At OZ Estimation, we believe every construction project deserves a precise, comprehensive cost estimate. Our mission is to empower contractors, builders, and developers with the financial clarity they need to bid confidently and execute projects successfully.
+                At Brix Estimation, we believe every construction project deserves a precise, comprehensive cost estimate. Our mission is to empower contractors, builders, and developers with the financial clarity they need to bid confidently and execute projects successfully.
               </p>
               <p className="text-slate-custom leading-relaxed mb-4">
                 Founded by industry professionals with decades of combined experience, we understand the challenges of construction bidding. Inaccurate estimates lead to lost bids, budget overruns, and project delays. That&apos;s why we leverage cutting-edge estimating software and proven methodologies to deliver estimates you can trust.
@@ -144,7 +144,7 @@ export default function AboutPage() {
             {[
               { title: 'Accuracy First', desc: 'Every calculation is triple-checked. Our meticulous approach ensures estimates within 2-5% of actual costs, giving you the confidence to bid competitively.' },
               { title: 'Timely Delivery', desc: 'Deadlines matter in construction. Most estimates are delivered within 24-48 hours without sacrificing quality, keeping your bidding process on track.' },
-              { title: 'Client Partnership', desc: 'OZ Estimation is an extension of your team. Open communication, transparency, and personalized service define every client relationship.' },
+              { title: 'Client Partnership', desc: 'Brix Estimation is an extension of your team. Open communication, transparency, and personalized service define every client relationship.' },
             ].map((v, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="bg-white border border-navy/10 shadow-sm rounded-md p-6 md:p-8 h-full hover:border-gold/20 transition-all">

@@ -43,19 +43,19 @@ export async function generateMetadata({ params }) {
       'cost breakdown',
       'bid support',
     ],
-    alternates: { canonical: `https://ozestimation.com/services/${category}/${service}/` },
+    alternates: { canonical: `https://brixestimation.com/services/${category}/${service}/` },
     openGraph: {
-      title: `${s.title} | OZ Estimation`,
+      title: `${s.title} | Brix Estimation`,
       description: `Professional ${s.title.toLowerCase()}. ASPE-certified. Free quotes in 24-48 hours.`,
-      url: `https://ozestimation.com/services/${category}/${service}/`,
-      siteName: 'OZ Estimation',
+      url: `https://brixestimation.com/services/${category}/${service}/`,
+      siteName: 'Brix Estimation',
       type: 'website',
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: `${s.title} Services` }],
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@ozestimation',
-      title: `${s.title} | OZ Estimation`,
+      site: '@brixestimation',
+      title: `${s.title} | Brix Estimation`,
       description: `Professional ${s.title.toLowerCase()}. 98% accuracy. Free quotes.`,
       images: ['/og-image.png'],
     },
@@ -75,14 +75,14 @@ export default async function ServicePage({ params }) {
     '@type': 'Service',
     name: s.title,
     description: s.description,
-    url: `https://ozestimation.com/services/${category}/${service}`,
-    image: 'https://ozestimation.com/og-image.png',
+    url: `https://brixestimation.com/services/${category}/${service}`,
+    image: 'https://brixestimation.com/og-image.png',
     category: cat.title,
     serviceType: s.title,
     provider: {
       '@type': 'Organization',
-      name: 'OZ Estimation',
-      url: 'https://ozestimation.com',
+      name: 'Brix Estimation',
+      url: 'https://brixestimation.com',
     },
     areaServed: { '@type': 'Country', name: 'United States' },
     offers: {
@@ -97,10 +97,10 @@ export default async function ServicePage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://ozestimation.com/services' },
-      { '@type': 'ListItem', position: 3, name: cat.title, item: `https://ozestimation.com/services/${category}` },
-      { '@type': 'ListItem', position: 4, name: s.title, item: `https://ozestimation.com/services/${category}/${service}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brixestimation.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://brixestimation.com/services' },
+      { '@type': 'ListItem', position: 3, name: cat.title, item: `https://brixestimation.com/services/${category}` },
+      { '@type': 'ListItem', position: 4, name: s.title, item: `https://brixestimation.com/services/${category}/${service}` },
     ],
   };
 
@@ -140,7 +140,7 @@ export default async function ServicePage({ params }) {
                 <h2 className="text-2xl md:text-3xl font-bold text-navy mb-6">Service Overview</h2>
                 <p className="text-slate-custom leading-relaxed mb-6">{s.longDescription}</p>
                 <p className="text-slate-custom leading-relaxed mb-6">
-                  At OZ Estimation, our team of experienced professionals uses the latest software tools and industry best practices to deliver comprehensive {s.title.toLowerCase()} that meet the highest standards of accuracy and detail. Whether you need a quick preliminary estimate or a full detailed takeoff, we have the expertise to help.
+                  At Brix Estimation, our team of experienced professionals uses the latest software tools and industry best practices to deliver comprehensive {s.title.toLowerCase()} that meet the highest standards of accuracy and detail. Whether you need a quick preliminary estimate or a full detailed takeoff, we have the expertise to help.
                 </p>
                 <p className="text-slate-custom leading-relaxed">
                   Our estimates include detailed material quantities, labor costs, equipment requirements, and all associated expenses to ensure your bids are competitive and your projects stay on budget.

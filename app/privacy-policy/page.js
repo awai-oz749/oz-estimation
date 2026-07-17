@@ -4,22 +4,22 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata = {
   title: 'Privacy Policy — How We Protect Your Data',
-  description: 'OZ Estimation privacy policy. How we collect, use, and protect your personal information, project plans, and estimation data. GDPR & CCPA compliant.',
-  keywords: ['OZ Estimation privacy policy', 'data protection', 'construction estimation privacy', 'information security'],
-  alternates: { canonical: 'https://ozestimation.com/privacy-policy/' },
+  description: 'Brix Estimation privacy policy. How we collect, use, and protect your personal information, project plans, and estimation data. GDPR & CCPA compliant.',
+  keywords: ['Brix Estimation privacy policy', 'data protection', 'construction estimation privacy', 'information security'],
+  alternates: { canonical: 'https://brixestimation.com/privacy-policy/' },
   openGraph: {
-    title: 'Privacy Policy | OZ Estimation',
-    description: 'How OZ Estimation collects, uses, and protects your information.',
-    url: 'https://ozestimation.com/privacy-policy/',
-    siteName: 'OZ Estimation',
+    title: 'Privacy Policy | Brix Estimation',
+    description: 'How Brix Estimation collects, uses, and protects your information.',
+    url: 'https://brixestimation.com/privacy-policy/',
+    siteName: 'Brix Estimation',
     type: 'website',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'OZ Estimation Privacy Policy' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Brix Estimation Privacy Policy' }],
   },
   twitter: {
     card: 'summary',
-    site: '@ozestimation',
-    title: 'Privacy Policy | OZ Estimation',
-    description: 'How OZ Estimation collects, uses, and protects your personal information and project data.',
+    site: '@brixestimation',
+    title: 'Privacy Policy | Brix Estimation',
+    description: 'How Brix Estimation collects, uses, and protects your personal information and project data.',
   },
 };
 
@@ -27,8 +27,8 @@ const privacyJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com' },
-    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://ozestimation.com/privacy-policy' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brixestimation.com' },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: 'https://brixestimation.com/privacy-policy' },
   ],
 };
 
@@ -68,7 +68,7 @@ export default function PrivacyPolicyPage() {
     },
     {
       title: 'Contact Us',
-      content: 'If you have questions about this privacy policy or our data practices, please contact us at info@ozestimation.com. You can also write to us at 425 W 11th St, 2nd Floor, Los Angeles, CA 90015.',
+      content: 'If you have questions about this privacy policy or our data practices, please contact us at info@brixestimation.com. You can also write to us at 425 W 11th St, 2nd Floor, Los Angeles, CA 90015.',
     },
   ];
 
@@ -87,7 +87,7 @@ export default function PrivacyPolicyPage() {
               Privacy <span className="text-gold">Policy</span>
             </h1>
             <p className="text-white/85 text-base md:text-lg leading-relaxed">
-              Last updated: May 2026. This policy describes how OZ Estimation collects, uses, and protects your information.
+              Last updated: May 2026. This policy describes how Brix Estimation collects, uses, and protects your information.
             </p>
           </AnimatedSection>
         </div>

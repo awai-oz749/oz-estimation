@@ -26,13 +26,13 @@ export default function WhyChooseUs({ light = false }) {
             Our Advantages
           </div>
           <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase mb-4 tracking-tight leading-[1.05] text-navy`}>
-            Why Choose OZ Estimation?
+            Why Choose Brix Estimation?
           </h2>
           <div className="mb-5 flex justify-center">
             <span className="heading-bar" />
           </div>
           <p className="max-w-2xl mx-auto text-base md:text-lg text-slate-custom">
-            OZ Estimation delivers precise, reliable cost estimations that help you win more bids and complete projects on budget.
+            Brix Estimation delivers precise, reliable cost estimations that help you win more bids and complete projects on budget.
           </p>
         </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">

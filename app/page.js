@@ -1,7 +1,7 @@
 import HomeContent from '@/components/HomeContent';
 
 export const metadata = {
-  title: 'OZ Estimation | Construction Cost Estimation USA',
+  title: 'Brix Estimation | Construction Cost Estimation USA',
   description: 'Accurate construction cost estimation for residential, commercial & industrial projects. Trusted by 1,000+ contractors. ASPE-certified. 24-48 hour quotes.',
   keywords: [
     'construction cost estimation', 'cost estimator', 'quantity takeoff', 'material takeoff',
@@ -14,28 +14,28 @@ export const metadata = {
     'drywall estimation', 'concrete estimation', 'electrical estimation cost',
   ],
   alternates: {
-    canonical: 'https://ozestimation.com/',
+    canonical: 'https://brixestimation.com/',
   },
   openGraph: {
-    title: 'OZ Estimation | Construction Cost Estimation Services',
+    title: 'Brix Estimation | Construction Cost Estimation Services',
     description: 'Accurate construction cost estimation for all project types. 5,000+ projects, 98% accuracy, ASPE-certified.',
-    url: 'https://ozestimation.com/',
-    siteName: 'OZ Estimation',
+    url: 'https://brixestimation.com/',
+    siteName: 'Brix Estimation',
     type: 'website',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'OZ Estimation - Construction Cost Estimation Services in USA',
+        alt: 'Brix Estimation - Construction Cost Estimation Services in USA',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@ozestimation',
-    creator: '@ozestimation',
-    title: 'OZ Estimation | Construction Cost Estimation',
+    site: '@brixestimation',
+    creator: '@brixestimation',
+    title: 'Brix Estimation | Construction Cost Estimation',
     description: '5,000+ projects. 98% accuracy. ASPE-certified. Free estimates in 24-48 hours.',
     images: ['/og-image.png'],
   },
@@ -45,26 +45,26 @@ const homeJsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    '@id': 'https://ozestimation.com/#homepage',
-    url: 'https://ozestimation.com/',
-    name: 'OZ Estimation | Construction Cost Estimation USA',
+    '@id': 'https://brixestimation.com/#homepage',
+    url: 'https://brixestimation.com/',
+    name: 'Brix Estimation | Construction Cost Estimation USA',
     description: 'Accurate construction cost estimation for residential, commercial & industrial projects across the USA.',
-    isPartOf: { '@id': 'https://ozestimation.com/#website' },
-    about: { '@id': 'https://ozestimation.com/#organization' },
-    primaryImageOfPage: { '@type': 'ImageObject', url: 'https://ozestimation.com/og-image.png' },
+    isPartOf: { '@id': 'https://brixestimation.com/#website' },
+    about: { '@id': 'https://brixestimation.com/#organization' },
+    primaryImageOfPage: { '@type': 'ImageObject', url: 'https://brixestimation.com/og-image.png' },
     inLanguage: 'en-US',
     speakable: {
       '@type': 'SpeakableSpecification',
       cssSelector: ['h1', 'h2', '.hero-subtitle'],
     },
-    breadcrumb: { '@id': 'https://ozestimation.com/#breadcrumb' },
+    breadcrumb: { '@id': 'https://brixestimation.com/#breadcrumb' },
   },
   {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    '@id': 'https://ozestimation.com/#breadcrumb',
+    '@id': 'https://brixestimation.com/#breadcrumb',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ozestimation.com/' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://brixestimation.com/' },
     ],
   },
 ];

@@ -1,6 +1,6 @@
 {
-  "name": "OZ Estimation — Construction Cost Estimators",
-  "short_name": "OZ Estimation",
+  "name": "Brix Estimation — Construction Cost Estimators",
+  "short_name": "Brix Estimation",
   "description": "Professional Construction Cost Estimation Services — Accurate Takeoffs & Cost Breakdowns in 24-48 Hours",
   "start_url": "/",
   "display": "standalone",
@@ -12,9 +12,9 @@
   "lang": "en-US",
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "/logo.png",
       "sizes": "any",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]
