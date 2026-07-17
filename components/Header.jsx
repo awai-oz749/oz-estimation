@@ -51,18 +51,18 @@ export default function Header() {
       <div className="top-strip" />
 
       {/* Top Banner */}
-      <div className="bg-white border-b border-navy/10 hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-xs text-navy/70">
+      <div className="bg-navy-dark border-b border-white/10 hidden md:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-2 text-xs text-white/70">
           <div className="flex items-center gap-5">
             <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-1.5 hover:text-amber transition-colors font-semibold">
               <HiEnvelope className="w-3.5 h-3.5 text-amber" /> {CONTACT.email}
             </a>
-            <span className="text-navy/20">|</span>
+            <span className="text-white/20">|</span>
             <span className="flex items-center gap-1.5">
               <HiClock className="w-3.5 h-3.5 text-amber" /> {CONTACT.hours}
             </span>
           </div>
-          <div className="text-navy/60 font-semibold tracking-[0.18em] uppercase text-[10px]">Professional Construction Cost Estimation</div>
+          <div className="text-white/60 font-semibold tracking-[0.18em] uppercase text-[10px]">Professional Construction Cost Estimation</div>
         </div>
       </div>
 
@@ -70,8 +70,8 @@ export default function Header() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-navy/5 border-b border-navy/10' 
-            : 'bg-white border-b border-navy/5'
+            ? 'bg-navy/95 backdrop-blur-xl shadow-lg shadow-black/20 border-b border-white/10' 
+            : 'bg-navy border-b border-white/10'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,8 +92,8 @@ export default function Header() {
                     href={item.href}
                     className={`flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
                       pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
-                        ? 'text-amber'
-                        : 'text-navy hover:text-amber'
+                        ? 'text-gold'
+                        : 'text-white hover:text-gold'
                     }`}
                   >
                     {item.label}
@@ -120,7 +120,7 @@ export default function Header() {
               </Link>
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden p-2 text-navy hover:text-gold transition-colors"
+                className="lg:hidden p-2 text-white hover:text-gold transition-colors"
                 aria-label="Toggle menu"
               >
                 {mobileOpen ? <HiXMark className="w-6 h-6" /> : <HiBars3 className="w-6 h-6" />}
