@@ -3,6 +3,7 @@ const config = {
   siteUrl: 'https://brixestimation.com',
   generateRobotsTxt: true,
   outDir: './out',
+  exclude: ['/icon.png', '/apple-icon.png', '/icon.png/', '/apple-icon.png/'],
   changefreq: 'weekly',
   priority: 0.7,
   sitemapSize: 7000,

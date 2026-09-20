@@ -221,7 +221,7 @@ const jsonLd = [
         },
       ],
     },
-    sameAs: [],
+    sameAs: ['https://www.linkedin.com/company/brix-estimation'],
     slogan: 'Accurate. Professional. Reliable.',
     paymentAccepted: 'Visa, MasterCard, American Express, PayPal',
     currenciesAccepted: 'USD',
@@ -249,6 +249,8 @@ const jsonLd = [
       latitude: 34.0407,
       longitude: -118.2622,
     },
+    hasMap: 'https://www.google.com/maps/search/?api=1&query=425+W+11th+St+2nd+Floor+Los+Angeles+CA+90015',
+    sameAs: ['https://www.linkedin.com/company/brix-estimation'],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

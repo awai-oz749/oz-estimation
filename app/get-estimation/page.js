@@ -154,6 +154,18 @@ export default function GetEstimationPage() {
                 <p>Sat: 9:00 AM – 2:00 PM</p>
                 <p>Sun: Closed</p>
               </ContactCard>
+              <div className="rounded-2xl overflow-hidden border border-navy/10 shadow-sm">
+                <iframe
+                  title="Brix Estimation Office Location"
+                  src="https://www.google.com/maps?q=425+W+11th+St,+Los+Angeles,+CA+90015&output=embed"
+                  width="100%"
+                  height="280"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
         </div>

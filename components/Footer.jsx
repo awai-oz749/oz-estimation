@@ -2,14 +2,10 @@ import Link from 'next/link';
 import { CONTACT, SITE, SOCIAL_LINKS } from '@/lib/constants';
 import { serviceCategories } from '@/data/services';
 import { HiEnvelope, HiMapPin, HiClock, HiArrowRight, HiOutlineShieldCheck, HiOutlineBolt, HiOutlineTrophy } from 'react-icons/hi2';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn, FaCcVisa, FaCcMastercard, FaCcAmex, FaCcPaypal } from 'react-icons/fa';
+import { FaLinkedinIn, FaCcVisa, FaCcMastercard, FaCcAmex, FaCcPaypal } from 'react-icons/fa';
 import Logo from './Logo';
 
 const socials = [
-  { href: SOCIAL_LINKS.facebook, label: 'Facebook', Icon: FaFacebookF },
-  { href: SOCIAL_LINKS.twitter, label: 'Twitter', Icon: FaTwitter },
-  { href: SOCIAL_LINKS.instagram, label: 'Instagram', Icon: FaInstagram },
-  { href: SOCIAL_LINKS.youtube, label: 'YouTube', Icon: FaYoutube },
   { href: SOCIAL_LINKS.linkedin, label: 'LinkedIn', Icon: FaLinkedinIn },
 ];
 
