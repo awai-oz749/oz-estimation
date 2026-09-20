@@ -8,7 +8,7 @@ const EMAIL_TO = (process.env.CONTACT_RECIPIENT_EMAIL || '')
   .map((e) => e.trim())
   .filter(Boolean)
   .join(', ');
-const MAX_FILE_SIZE_MB = 10;
+const MAX_FILE_SIZE_MB = 4;
 
 const FIELD_RULES = {
   name: { required: true, minLength: 2, maxLength: 100 },
